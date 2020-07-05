@@ -1,0 +1,120 @@
+.l-header {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  height: 128px;
+  width: 200px;
+  background-color: lightyellow;
+  margin: 1px;
+  text-align: center;
+  line-height: 128px;
+  font-size: 48px;
+}
+
+.cut {
+  height: 16px;
+  width: 200px;
+  background-color: beige;
+  margin: 1px;
+}
+
+.shaving {
+  height: 16px;
+  width: 200px;
+  background-color : beige;
+  margin: 1px;
+}
+
+.l-all {
+  margin-top: 160px;
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-around;
+  color: slategrey;
+}
+
+.l-front {
+  display: flex;
+}
+
+.l-back {
+  display: flex;
+}
+
+.l-left {
+  display: flex;
+}
+
+.l-right {
+  display: flex;
+}
+
+.one>.main,.one>.cut,.one>.shaving {
+  width: 16px;
+  background-color: beige;
+}
+
+.three>.main,.three>.cut,.three>.shaving {
+  width: 16px;
+  background-color: beige;
+}
+
+.four>.main,.four>.cut,.four>.shaving {
+  width: 16px;
+  background-color: beige;
+}
+
+.six>.main,.six>.cut,.six>.shaving {
+  width: 16px;
+  background-color: beige;
+}
+
+.left>.main,.left>.cut,.left>.shaving {
+  width: 32px;
+  background-color: #fff;
+  font-size: 16px;
+  text-align: right;
+  line-height: 16px;
+}
+
+.right>.main,.right>.cut,.right>.shaving {
+  width: 32px;
+  background-color: #fff;
+  font-size: 16px;
+  text-align: left;
+  line-height: 16px;
+}
+
+.top-out {
+  text-align: center;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.bottom-out {
+  text-align: center;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.right>.main {
+  line-height: 128px;
+}
+
+.top-out {
+  height: 16px;
+  line-height: 16px;
+}
+
+.l-selector {
+  width: 16%;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+}
+
+#size,#direction,#method {
+  margin-bottom: 32px;
+}
