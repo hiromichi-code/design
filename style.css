@@ -10,12 +10,16 @@ body {
   background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
   background: linear-gradient(to right, #B0DAB9, #DAD299); 
   color: #fff;
-  padding-top: 128px;
+  padding-top: 64px;
   padding-left: 128px;
 }
 
 .l-header>h1,p {
   width: 32%;
+}
+
+.l-header>h1 {
+  font-size: 80px;
 }
 
 .main {
@@ -124,10 +128,18 @@ body {
 }
 
 .l-selector {
-  width: 16%;
+  height: 400px;
   display: flex;
   flex-direction: column;
-  margin: 128px auto;
+  padding-left: 128px;
+  margin: 0 auto;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+}
+
+.l-selector>select {
+  width: 14%;
 }
 
 #book-size,#direction,#method,#paper-size {
