@@ -1,6 +1,21 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
 .l-header {
-  display: flex;
-  justify-content: center;
+  display: block;
+  height: 800px;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  color: #fff;
+  padding-top: 128px;
+  padding-left: 128px;
+}
+
+.l-header>h1,p {
+  width: 32%;
 }
 
 .main {
@@ -112,9 +127,9 @@
   width: 16%;
   display: flex;
   flex-direction: column;
-  margin: 0px auto;
+  margin: 128px auto;
 }
 
-#size,#direction,#method,#paper-size {
+#book-size,#direction,#method,#paper-size {
   margin-bottom: 32px;
 }
