@@ -14,17 +14,6 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eos reiciendis itaque non distinctio! Accusantium, culpa. Voluptatem minima voluptates vel, tempora nisi atque sequi doloremque fugit! Excepturi reprehenderit corporis provident!</p>
     </div>
     <div class="l-selector">
-      <select name="book-size" id="book-size">
-        <option value="">仕上げサイズを選択</option>
-        <option value="A4">A4</option>
-        <option value="A5">A5</option>
-        <option value="B5">B5</option>
-        <option value="B6">B6</option>
-        <option value="46">四六判</option>
-        <option value="A6">A6</option>
-        <option value="B4">B4</option>
-        <option value="A3">A3</option>
-      </select>
       <select name="paper-size" id="paper-size">
         <option value="">印刷用紙サイズを選択</option>
         <option value="k-all">菊全</option>
@@ -41,6 +30,17 @@
         <option value="">綴じ方向を選択</option>
         <option value="left">左綴じ</option>
         <option value="right">右綴じ</option>
+      </select>
+      <select name="book-size" id="book-size">
+        <option value="">仕上げサイズを選択</option>
+        <option value="A4">A4</option>
+        <option value="A5">A5</option>
+        <option value="B5">B5</option>
+        <option value="B6">B6</option>
+        <option value="46">四六判</option>
+        <option value="A6">A6</option>
+        <!-- <option value="B4">B4</option>
+        <option value="A3">A3</option> -->
       </select>
       <select name="book-method" id="method">
         <option value="">製本方法を選択</option>
@@ -89,16 +89,16 @@
         <div class="two">
           <div class="top-out">針</div>
           <div class="cut"></div>
-          <div class="main"><u>6</u></div>
+          <div class="main" id="mainText1"><u>6</u></div>
           <div class="shaving"></div>
           <div class="shaving"></div>
-          <div class="main">11</div>
+          <div class="main" id="mainText2">11</div>
           <div class="cut"></div>
           <div class="cut"></div>
-          <div class="main">10</div>
+          <div class="main" id="mainText3">10</div>
           <div class="shaving"></div>
           <div class="shaving"></div>
-          <div class="main">7</div>
+          <div class="main" id="mainText4">7</div>
           <div class="cut"></div>
           <div class="bottom-out" id="bottom-out1"></div>
         </div>

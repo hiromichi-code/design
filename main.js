@@ -1,5 +1,31 @@
 'use strict';
 
+// const tgtDropdownMenu = document.querySelector("#direction");
+
+// tgtDropdownMenu.addEventListener('change', (e)　=> {
+//   let value = tgtDropdownMenu.value;
+//   if(value === "left") {
+//     // let myStyle = {
+//     //   transform: 'rotate(90deg)',
+//     //   display: 'inline-block',
+//     // }
+//     let a = document.getElementById('mainText1');
+//     a.style.transform = 'rotate(90deg)';
+//     // a.style.display = 'inline-block';
+    
+//     // document.getElementById('mainText2').style.transform = 'rotate(45deg)';
+//     // document.getElementById('mainText3').style;
+//     // document.getElementById('mainText4').style;
+//   }
+// });
+
+// tgtDropdownMenu.addEventListener('change', (e)　=> {
+//   let value = tgtDropdownMenu.value;
+//   if(value === "right"){
+    
+//   }
+// });
+
 const tgtDropdownMenu = document.querySelector("#book-size");
 
 tgtDropdownMenu.addEventListener('change', (e)　=> {
