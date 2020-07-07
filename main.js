@@ -120,7 +120,7 @@
     let value = tgtOneDropdownMenu.value;
     // let bookSizeWidth = [210,148,182,128,128,105,257,297];
     // let bookSizeHight = [297,210,257,182,188,148,362,420];
-    // if(value === i){
+    // if(value === ?){
     //   document.getElementById('main1').textContent = bookSizeWidth;
     //   document.getElementById('main2').textContent = bookSizeWidth;
     //   document.getElementById('main3').textContent = bookSizeWidth;
