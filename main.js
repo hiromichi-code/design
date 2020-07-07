@@ -1,8 +1,8 @@
 'use strict';
 
-// 綴じ方向の選択処理
+// 綴じ方向の選択処理 tgtDropdownMenu
 
-// 左綴じの場合の処理
+// 左綴じの場合の処理 
   const tgtDropdownMenu = document.querySelector("#direction");
   
   tgtDropdownMenu.addEventListener('change', (e)　=> {
@@ -113,101 +113,162 @@
     }
   });
 
-// 本のサイズ選択処理
-  const tgtOneDropdownMenu = document.querySelector("#book-size");
+// 本のサイズ選択処理 tgtOneDropdownMenu
+  const tgtOneDropdownMenu = document.querySelector("#bookSize");
   
   tgtOneDropdownMenu.addEventListener('change', (e)　=> {
     let value = tgtOneDropdownMenu.value;
+    // let bookSizeWidth = [210,148,182,128,128,105,257,297];
+    // let bookSizeHight = [297,210,257,182,188,148,362,420];
+    // if(value === i){
+    //   document.getElementById('main1').textContent = bookSizeWidth;
+    //   document.getElementById('main2').textContent = bookSizeWidth;
+    //   document.getElementById('main3').textContent = bookSizeWidth;
+    //   document.getElementById('main4').textContent = bookSizeWidth;
+    //   document.getElementById('bottomOut1').textContent = bookSizeHight;
+    //   document.getElementById('bottomOut2').textContent = bookSizeHight;
+    // }
+
+
     if(value === "A4"){
-      document.getElementById('main1').textContent = "210";
-      document.getElementById('main2').textContent = "210";
-      document.getElementById('main3').textContent = "210";
-      document.getElementById('main4').textContent = "210";
-      document.getElementById('bottom-out1').textContent = "297";
-      document.getElementById('bottom-out2').textContent = "297";
-    }
-  });
-  
-  tgtOneDropdownMenu.addEventListener('change', (e)　=> {
-    let value = tgtOneDropdownMenu.value;
-    if(value === "A5"){
+        document.getElementById('main1').textContent = "210";
+        document.getElementById('main2').textContent = "210";
+        document.getElementById('main3').textContent = "210";
+        document.getElementById('main4').textContent = "210";
+        document.getElementById('bottomOut1').textContent = "297";
+        document.getElementById('bottomOut2').textContent = "297";
+    } else if(value === "A5"){
       document.getElementById('main1').textContent ="148";
       document.getElementById('main2').textContent ="148";
       document.getElementById('main3').textContent ="148";
       document.getElementById('main4').textContent ="148";
-      document.getElementById('bottom-out1').textContent ="210";
-      document.getElementById('bottom-out2').textContent ="210";
-    }
-  });
-  
-  tgtOneDropdownMenu.addEventListener('change', (e)　=> {
-    let value = tgtOneDropdownMenu.value;
-    if(value === "B5"){
+      document.getElementById('bottomOut1').textContent ="210";
+      document.getElementById('bottomOut2').textContent ="210";
+    } else if(value === "B5"){
       document.getElementById('main1').textContent ="182";
       document.getElementById('main2').textContent ="182";
       document.getElementById('main3').textContent ="182";
       document.getElementById('main4').textContent ="182";
-      document.getElementById('bottom-out1').textContent ="257";
-      document.getElementById('bottom-out2').textContent ="257";
-    }
-  });
-  
-  tgtOneDropdownMenu.addEventListener('change', (e)　=> {
-    let value = tgtOneDropdownMenu.value;
-    if(value === "B6"){
+      document.getElementById('bottomOut1').textContent ="257";
+      document.getElementById('bottomOut2').textContent ="257";
+    } else if(value === "B6"){
       document.getElementById('main1').textContent ="128";
       document.getElementById('main2').textContent ="128";
       document.getElementById('main3').textContent ="128";
       document.getElementById('main4').textContent ="128";
-      document.getElementById('bottom-out1').textContent ="182";
-      document.getElementById('bottom-out2').textContent ="182";
-    }
-  });
-  
-  tgtOneDropdownMenu.addEventListener('change', (e)　=> {
-    let value = tgtOneDropdownMenu.value;
-    if(value === "四六判"){
+      document.getElementById('bottomOut1').textContent ="182";
+      document.getElementById('bottomOut2').textContent ="182";
+    } else if(value === "四六判"){
       document.getElementById('main1').textContent ="128";
       document.getElementById('main2').textContent ="128";
       document.getElementById('main3').textContent ="128";
       document.getElementById('main4').textContent ="128";
-      document.getElementById('bottom-out1').textContent ="188";
-      document.getElementById('bottom-out2').textContent ="188";
-    }
-  });
-  
-  tgtOneDropdownMenu.addEventListener('change', (e)　=> {
-    let value = tgtOneDropdownMenu.value;
-    if(value === "A6"){
+      document.getElementById('bottomOut1').textContent ="188";
+      document.getElementById('bottomOut2').textContent ="188";
+    }　else if(value === "A6"){
       document.getElementById('main1').textContent ="105";
       document.getElementById('main2').textContent ="105";
       document.getElementById('main3').textContent ="105";
       document.getElementById('main4').textContent ="105";
-      document.getElementById('bottom-out1').textContent ="148";
-      document.getElementById('bottom-out2').textContent ="148";
-    }
-  });
-  
-  tgtOneDropdownMenu.addEventListener('change', (e)　=> {
-    let value = tgtOneDropdownMenu.value;
-    if(value === "B4"){
+      document.getElementById('bottomOut1').textContent ="148";
+      document.getElementById('bottomOut2').textContent ="148";
+    } else if(value === "B4"){
       document.getElementById('main1').textContent ="384";
       document.getElementById('main2').textContent ="384";
       document.getElementById('main3').textContent ="384";
       document.getElementById('main4').textContent ="384";
-      document.getElementById('bottom-out1').textContent ="257";
-      document.getElementById('bottom-out2').textContent ="257";
-    }
-  });
-  
-  tgtOneDropdownMenu.addEventListener('change', (e)　=> {
-    let value = tgtOneDropdownMenu.value;
-    if(value === "A3"){
+      document.getElementById('bottomOut1').textContent ="257";
+      document.getElementById('bottomOut2').textContent ="257";
+    } else if(value === "A3"){
       document.getElementById('main1').textContent ="420";
       document.getElementById('main2').textContent ="420";
       document.getElementById('main3').textContent ="420";
       document.getElementById('main4').textContent ="420";
-      document.getElementById('bottom-out1').textContent ="297";
-      document.getElementById('bottom-out2').textContent ="297";
+      document.getElementById('bottomOut1').textContent ="297";
+      document.getElementById('bottomOut2').textContent ="297";
     }
   });
+  
+  // tgtOneDropdownMenu.addEventListener('change', (e)　=> {
+  //   let value = tgtOneDropdownMenu.value;
+  //   if(value === "A5"){
+  //     document.getElementById('main1').textContent ="148";
+  //     document.getElementById('main2').textContent ="148";
+  //     document.getElementById('main3').textContent ="148";
+  //     document.getElementById('main4').textContent ="148";
+  //     document.getElementById('bottom-out1').textContent ="210";
+  //     document.getElementById('bottom-out2').textContent ="210";
+  //   }
+  // });
+  
+  // tgtOneDropdownMenu.addEventListener('change', (e)　=> {
+  //   let value = tgtOneDropdownMenu.value;
+  //   if(value === "B5"){
+  //     document.getElementById('main1').textContent ="182";
+  //     document.getElementById('main2').textContent ="182";
+  //     document.getElementById('main3').textContent ="182";
+  //     document.getElementById('main4').textContent ="182";
+  //     document.getElementById('bottom-out1').textContent ="257";
+  //     document.getElementById('bottom-out2').textContent ="257";
+  //   }
+  // });
+  
+  // tgtOneDropdownMenu.addEventListener('change', (e)　=> {
+  //   let value = tgtOneDropdownMenu.value;
+  //   if(value === "B6"){
+  //     document.getElementById('main1').textContent ="128";
+  //     document.getElementById('main2').textContent ="128";
+  //     document.getElementById('main3').textContent ="128";
+  //     document.getElementById('main4').textContent ="128";
+  //     document.getElementById('bottom-out1').textContent ="182";
+  //     document.getElementById('bottom-out2').textContent ="182";
+  //   }
+  // });
+  
+  // tgtOneDropdownMenu.addEventListener('change', (e)　=> {
+  //   let value = tgtOneDropdownMenu.value;
+  //   if(value === "四六判"){
+  //     document.getElementById('main1').textContent ="128";
+  //     document.getElementById('main2').textContent ="128";
+  //     document.getElementById('main3').textContent ="128";
+  //     document.getElementById('main4').textContent ="128";
+  //     document.getElementById('bottom-out1').textContent ="188";
+  //     document.getElementById('bottom-out2').textContent ="188";
+  //   }
+  // });
+  
+  // tgtOneDropdownMenu.addEventListener('change', (e)　=> {
+  //   let value = tgtOneDropdownMenu.value;
+  //   if(value === "A6"){
+  //     document.getElementById('main1').textContent ="105";
+  //     document.getElementById('main2').textContent ="105";
+  //     document.getElementById('main3').textContent ="105";
+  //     document.getElementById('main4').textContent ="105";
+  //     document.getElementById('bottom-out1').textContent ="148";
+  //     document.getElementById('bottom-out2').textContent ="148";
+  //   }
+  // });
+  
+  // tgtOneDropdownMenu.addEventListener('change', (e)　=> {
+  //   let value = tgtOneDropdownMenu.value;
+  //   if(value === "B4"){
+  //     document.getElementById('main1').textContent ="384";
+  //     document.getElementById('main2').textContent ="384";
+  //     document.getElementById('main3').textContent ="384";
+  //     document.getElementById('main4').textContent ="384";
+  //     document.getElementById('bottom-out1').textContent ="257";
+  //     document.getElementById('bottom-out2').textContent ="257";
+  //   }
+  // });
+  
+  // tgtOneDropdownMenu.addEventListener('change', (e)　=> {
+  //   let value = tgtOneDropdownMenu.value;
+  //   if(value === "A3"){
+  //     document.getElementById('main1').textContent ="420";
+  //     document.getElementById('main2').textContent ="420";
+  //     document.getElementById('main3').textContent ="420";
+  //     document.getElementById('main4').textContent ="420";
+  //     document.getElementById('bottom-out1').textContent ="297";
+  //     document.getElementById('bottom-out2').textContent ="297";
+  //   }
+  // });
