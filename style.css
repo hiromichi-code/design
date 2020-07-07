@@ -105,13 +105,13 @@ body {
   line-height: 16px;
 }
 
-.top-out {
+.topOut {
   text-align: center;
   font-size: 16px;
   line-height: 16px;
 }
 
-.bottom-out {
+.bottomOut {
   text-align: center;
   font-size: 16px;
   line-height: 16px;
@@ -121,7 +121,7 @@ body {
   line-height: 128px;
 }
 
-.top-out {
+.topOut {
   height: 16px;
   line-height: 16px;
 }
@@ -141,6 +141,6 @@ body {
   width: 14%;
 }
 
-#book-size,#direction,#method,#paper-size {
+#bookSize,#direction,#method,#paperSize {
   margin-bottom: 32px;
 }
