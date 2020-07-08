@@ -297,14 +297,14 @@
 
 // 用紙サイズ選択処理
 
-const tgtThreeDropdownMenu = document.querySelector("#paperSize");
+// const tgtThreeDropdownMenu = document.querySelector("#paperSize");
 
-tgtThreeDropdownMenu.addEventListener('change',(e) => {
-  let value = tgtThreeDropdownMenu.value;
-  if(value === "kAll"){
+// tgtThreeDropdownMenu.addEventListener('change',(e) => {
+//   let value = tgtThreeDropdownMenu.value;
+//   if(value === "kAll"){
 
-  }
-});
+//   }
+// });
 
         // <option value="kAll">菊全</option>
         // <option value="aAll">A全</option>

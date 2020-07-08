@@ -103,7 +103,7 @@ body {
 .left>.main,.left>.cut,.left>.shaving {
   width: 32px;
   background: #fff;
-  font-size: 16px;
+  font-size: 12px;
   text-align: right;
   line-height: 16px;
 }
@@ -111,21 +111,21 @@ body {
 .right>.main,.right>.cut,.right>.shaving {
   width: 32px;
   background: #fff;
-  font-size: 16px;
+  font-size: 12px;
   text-align: left;
   line-height: 16px;
 }
 
 .topOut {
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 16px;
   height: 16px;
 }
 
 .bottomOut {
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 16px;
 }
 
@@ -133,25 +133,30 @@ body {
   line-height: 128px;
 }
 
-
-
-
-
 .l-selector {
-  height: 208px;
+  height: 128px;
   display: flex;
-  flex-direction: column;
-  padding-left: 128px;
+  flex-flow: wrap column;
+  align-content: space-around;
   margin: 0 auto;
-  background: #DAD299; 
-  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-  background: linear-gradient(to right, #B0DAB9, #DAD299); 
 }
 
 .l-selector>select {
   width: 14%;
 }
 
+select {
+  font-size: large;
+}
+
+
 #bookSize,#direction,#method,#paperSize {
   margin-bottom: 32px;
+}
+
+.l-selector {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  padding-top: 32px;
 }
