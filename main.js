@@ -131,12 +131,12 @@
 
 
     if(value === "A4"){
-        document.getElementById('main1').textContent = "210";
-        document.getElementById('main2').textContent = "210";
-        document.getElementById('main3').textContent = "210";
-        document.getElementById('main4').textContent = "210";
-        document.getElementById('bottomOut1').textContent = "297";
-        document.getElementById('bottomOut2').textContent = "297";
+      document.getElementById('main1').textContent = "210";
+      document.getElementById('main2').textContent = "210";
+      document.getElementById('main3').textContent = "210";
+      document.getElementById('main4').textContent = "210";
+      document.getElementById('bottomOut1').textContent = "297";
+      document.getElementById('bottomOut2').textContent = "297";
     } else if(value === "A5"){
       document.getElementById('main1').textContent ="148";
       document.getElementById('main2').textContent ="148";
@@ -272,3 +272,46 @@
   //     document.getElementById('bottom-out2').textContent ="297";
   //   }
   // });
+
+
+// 製本方法の選択処理　tgtTwoDropdownMenu
+
+// const tgtTwoDropdownMenu = document.querySelector("#method");
+// let mainAll = document.getElementById('main1')+document.
+// getElementById('main2')+document.getElementById('main3')+document.getElementById('main4');
+// let bookSize = 
+  
+// tgtTwoDropdownMenu.addEventListener('change', (e)　=> {
+//     let value = tgtTwoDropdownMenu.value;
+//     if(value === "perfect"){
+//       document.getElementById('shaving1').textContent = "3";
+//       document.getElementById('shaving2').textContent = "3";
+//       document.getElementById('shaving3').textContent = "3";
+//       document.getElementById('shaving4').textContent = "3";
+//     }
+    
+//     if(tgtDropdownMenu.value === "A4"){
+//       document.getElementById('longOut1').textContent = ((mainAll-840-12)/4);
+//     }
+
+
+// 用紙サイズ選択処理
+
+const tgtThreeDropdownMenu = document.querySelector("#paperSize");
+
+tgtThreeDropdownMenu.addEventListener('change',(e) => {
+  let value = tgtThreeDropdownMenu.value;
+  if(value === "kAll"){
+
+  }
+});
+
+        // <option value="kAll">菊全</option>
+        // <option value="aAll">A全</option>
+        // <option value="46Half">四六半裁</option>
+        // <option value="kHalf">菊半裁</option>
+        // <option value="aHalf">A半裁</option>
+        // <option value="46All">四六全版</option>
+        // <option value="KHalfHalf">菊四裁</option>
+        // <option value="aHalfHalf">A四裁</option>
+        // <option value="46HalfHalf">四六四裁</option>

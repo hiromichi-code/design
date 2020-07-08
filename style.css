@@ -5,7 +5,7 @@ body {
 
 .l-header {
   display: block;
-  height: 800px;
+  height: 736px;
   background: #DAD299; 
   background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
   background: linear-gradient(to right, #B0DAB9, #DAD299); 
@@ -34,20 +34,23 @@ body {
 .cut {
   height: 16px;
   width: 200px;
-  background-color: beige;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
   margin: 1px;
 }
 
 .shaving {
   height: 16px;
   width: 200px;
-  background-color : beige;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
   margin: 1px;
 }
 
 .l-all {
-  margin: 160px auto 160px auto;
-  padding-top: 32px;
+  margin: 64px auto 160px auto;
   display: flex;
   justify-content: space-around;
   color: slategrey;
@@ -71,27 +74,35 @@ body {
 
 .one>.main,.one>.cut,.one>.shaving {
   width: 16px;
-  background-color: beige;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
 }
 
 .three>.main,.three>.cut,.three>.shaving {
   width: 16px;
-  background-color: beige;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
 }
 
 .four>.main,.four>.cut,.four>.shaving {
   width: 16px;
-  background-color: beige;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
 }
 
 .six>.main,.six>.cut,.six>.shaving {
   width: 16px;
-  background-color: beige;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
 }
 
 .left>.main,.left>.cut,.left>.shaving {
   width: 32px;
-  background-color: #fff;
+  background: #fff;
   font-size: 16px;
   text-align: right;
   line-height: 16px;
@@ -99,7 +110,7 @@ body {
 
 .right>.main,.right>.cut,.right>.shaving {
   width: 32px;
-  background-color: #fff;
+  background: #fff;
   font-size: 16px;
   text-align: left;
   line-height: 16px;
@@ -109,6 +120,7 @@ body {
   text-align: center;
   font-size: 16px;
   line-height: 16px;
+  height: 16px;
 }
 
 .bottomOut {
@@ -121,13 +133,12 @@ body {
   line-height: 128px;
 }
 
-.topOut {
-  height: 16px;
-  line-height: 16px;
-}
+
+
+
 
 .l-selector {
-  height: 400px;
+  height: 208px;
   display: flex;
   flex-direction: column;
   padding-left: 128px;

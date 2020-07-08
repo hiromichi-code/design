@@ -16,20 +16,15 @@
     <div class="l-selector">
       <select name="paperSize" id="paperSize">
         <option value="">印刷用紙サイズを選択</option>
-        <option value="k-all">菊全</option>
-        <option value="A-all">A全</option>
-        <option value="46-half">四六半裁</option>
-        <option value="k-half">菊半裁</option>
-        <option value="A-half">A半裁</option>
-        <option value="46-all">四六全版</option>
-        <option value="k-half-half">菊四裁</option>
-        <option value="A-half-half">A四裁</option>
-        <option value="46-half-half">四六四裁</option>
-      </select>
-      <select name="bookDirection" id="direction">
-        <option value="">綴じ方向を選択</option>
-        <option value="left">左綴じ</option>
-        <option value="right">右綴じ</option>
+        <option value="kAll">菊全</option>
+        <option value="aAll">A全</option>
+        <option value="46Half">四六半裁</option>
+        <option value="kHalf">菊半裁</option>
+        <option value="aHalf">A半裁</option>
+        <option value="46All">四六全版</option>
+        <option value="KHalfHalf">菊四裁</option>
+        <option value="aHalfHalf">A四裁</option>
+        <option value="46HalfHalf">四六四裁</option>
       </select>
       <select name="bookSize" id="bookSize">
         <option value="">仕上げサイズを選択</option>
@@ -48,6 +43,11 @@
         <option value="binding">アジロ綴じ</option>
         <option value="thread">糸かがり</option>
         <option value="sewing">中綴じ・中ミシン</option>
+      </select>
+      <select name="bookDirection" id="direction">
+        <option value="">綴じ方向を選択</option>
+        <option value="left">左綴じ</option>
+        <option value="right">右綴じ</option>
       </select>
     </div>
   </header>
@@ -84,7 +84,7 @@
           <div class="shaving"></div>
           <div class="main"></div>
           <div class="cut"></div>
-          <div class="bottomOut">3</div>
+          <div class="bottomOut" id="shortOut1">3</div>
         </div>
         <div class="two">
           <div class="topOut">針</div>
@@ -116,7 +116,7 @@
           <div class="shaving"></div>
           <div class="main"></div>
           <div class="cut"></div>
-          <div class="bottomOut">3</div>
+          <div class="bottomOut" id="shortIn1">3</div>
         </div>
       </div>
       <div class="l-right">
@@ -134,7 +134,7 @@
           <div class="shaving"></div>
           <div class="main"></div>
           <div class="cut"></div>
-          <div class="bottomOut">3</div>
+          <div class="bottomOut" id="shortIn2">15</div>
         </div>
         <div class="five">
           <div class="topOut"></div>
@@ -166,22 +166,22 @@
           <div class="shaving"></div>
           <div class="main"></div>
           <div class="cut"></div>
-          <div class="bottomOut">3</div>
+          <div class="bottomOut" id="shortOut2"></div>
         </div>
         <div class="right">
           <div class="topOut"></div>
-          <div class="cut">3</div>
+          <div class="cut" id="longOut1">3</div>
           <div class="main" id="main1"></div>
-          <div class="shaving">3</div>
-          <div class="shaving">3</div>
+          <div class="shaving" id="shaving1">3</div>
+          <div class="shaving" id="shaving2">3</div>
           <div class="main" id="main2"></div>
-          <div class="cut">3</div>
-          <div class="cut">3</div>
+          <div class="cut" id="longIN1">3</div>
+          <div class="cut" id="longIN2">3</div>
           <div class="main" id="main3"></div>
-          <div class="shaving">3</div>
-          <div class="shaving">3</div>
+          <div class="shaving" id="shaving3">3</div>
+          <div class="shaving" id="shaving4">3</div>
           <div class="main" id="main4"></div>
-          <div class="cut">3</div>
+          <div class="cut" id="longOut2">3</div>
           <div class="bottomOut"></div>
         </div>
       </div>
