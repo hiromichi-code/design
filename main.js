@@ -306,12 +306,12 @@
 //   }
 // });
 
-        // <option value="kAll">菊全</option>
-        // <option value="aAll">A全</option>
-        // <option value="46Half">四六半裁</option>
-        // <option value="kHalf">菊半裁</option>
-        // <option value="aHalf">A半裁</option>
-        // <option value="46All">四六全版</option>
-        // <option value="KHalfHalf">菊四裁</option>
-        // <option value="aHalfHalf">A四裁</option>
-        // <option value="46HalfHalf">四六四裁</option>
+        // <option value="kAll">菊全</option> 長辺939✕短辺636
+        // <option value="aAll">A全</option>　長辺880✕短辺625
+        // <option value="46Half">四六半裁</option>　長辺788✕短辺545
+        // <option value="kHalf">菊半裁</option>　長辺636✕短辺469
+        // <option value="aHalf">A半裁</option>　長辺625✕短辺440
+        // <option value="46All">四六全版</option>　長辺1091✕短辺788
+        // <option value="KHalfHalf">菊四裁</option>　長辺469✕短辺318
+        // <option value="aHalfHalf">A四裁</option>　長辺440✕短辺312
+        // <option value="46HalfHalf">四六四裁</option>　長辺545✕短辺394
