@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,38 +14,43 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eos reiciendis itaque non distinctio! Accusantium, culpa. Voluptatem minima voluptates vel, tempora nisi atque sequi doloremque fugit! Excepturi reprehenderit corporis provident!</p>
     </div>
     <div class="l-selector">
-      <select name="paperSize" id="paperSize">
-        <option value="">印刷用紙サイズを選択</option>
-        <option value="kAll">菊全</option>
-        <option value="aAll">A全</option>
-        <option value="46Half">四六半裁</option>
-        <option value="kHalf">菊半裁</option>
-        <option value="aHalf">A半裁</option>
-        <option value="46All">四六全版</option>
-        <option value="KHalfHalf">菊四裁</option>
-        <option value="aHalfHalf">A四裁</option>
-        <option value="46HalfHalf">四六四裁</option>
-      </select>
       <select name="bookSize" id="bookSize">
-        <option value="">仕上げサイズを選択</option>
+        <option value="bookSizeZero">仕上げサイズを選択</option>
         <option value="A4">A4</option>
         <option value="A5">A5</option>
         <option value="B5">B5</option>
         <option value="B6">B6</option>
         <option value="46">四六判</option>
         <option value="A6">A6</option>
-        <option value="B4" id="eight">B4</option>
-        <option value="A3" id="eight">A3</option>
+        <!-- <option value="B4" id="eight">B4</option>
+        <option value="A3" id="eight">A3</option> -->
+      </select>
+      <!-- <select name="VerticalAndHorizontal" id="VerticalAndHorizontal">
+        <option value="">縦型か横型を選択</option>
+        <option value="Vertical">縦</option>
+        <option value="Horizontal">横</option>
+      </select> -->
+      <select name="paperSize" id="paperSize">
+        <option value="sizeZero">印刷用紙サイズを選択</option>
+        <option value="kAll">菊全</option>
+        <option value="aAll">A全</option>
+        <option value="46Half">四六半裁</option>
+        <option value="kHalf">菊半裁</option>
+        <option value="aHalf">A半裁</option>
+        <!-- <option value="46All">四六全版</option> -->
+        <option value="KHalfHalf">菊四裁</option>
+        <option value="aHalfHalf">A四裁</option>
+        <option value="46HalfHalf">四六四裁</option>
       </select>
       <select name="bookMethod" id="method">
-        <option value="">製本方法を選択</option>
+        <option value="methodZero">製本方法を選択</option>
         <option value="perfect">無線綴じ・PUR無線綴じ・平綴じ</option>
         <option value="binding">アジロ綴じ</option>
         <option value="thread">糸かがり</option>
-        <option value="sewing">中綴じ・中ミシン</option>
+        <!-- <option value="sewing">中綴じ・中ミシン</option> -->
       </select>
       <select name="bookDirection" id="direction">
-        <option value="">綴じ方向を選択</option>
+        <option value="initial">綴じ方向を選択</option>
         <option value="left">左綴じ</option>
         <option value="right">右綴じ</option>
       </select>
@@ -89,16 +94,16 @@
         <div class="two">
           <div class="topOut">針</div>
           <div class="cut"></div>
-          <div class="main" id="mainText1"><u>6</u></div>
+          <div class="main" id="mainText1"><u></u></div>
           <div class="shaving"></div>
           <div class="shaving"></div>
-          <div class="main" id="mainText2">11</div>
+          <div class="main" id="mainText2"></div>
           <div class="cut"></div>
           <div class="cut"></div>
-          <div class="main" id="mainText3">10</div>
+          <div class="main" id="mainText3"></div>
           <div class="shaving"></div>
           <div class="shaving"></div>
-          <div class="main" id="mainText4">7</div>
+          <div class="main" id="mainText4"></div>
           <div class="cut"></div>
           <div class="bottomOut" id="bottomOut1"></div>
         </div>
@@ -139,16 +144,16 @@
         <div class="five">
           <div class="topOut"></div>
           <div class="cut"></div>
-          <div class="main" id="mainText5">3</div>
+          <div class="main" id="mainText5"></div>
           <div class="shaving"></div>
           <div class="shaving"></div>
-          <div class="main" id="mainText6">14</div>
+          <div class="main" id="mainText6"></div>
           <div class="cut"></div>
           <div class="cut"></div>
-          <div class="main" id="mainText7">15</div>
+          <div class="main" id="mainText7"></div>
           <div class="shaving"></div>
           <div class="shaving"></div>
-          <div class="main" id="mainText8">2</div>
+          <div class="main" id="mainText8"></div>
           <div class="cut"></div>
           <div class="bottomOut" id="bottomOut2"></div>
         </div>
@@ -166,23 +171,22 @@
           <div class="shaving"></div>
           <div class="main"></div>
           <div class="cut"></div>
-          <div class="bottomOut" id="shortOut2">3</div>
+          <div class="bottomOut" id="shortOut2"></div>
         </div>
         <div class="right">
           <div class="topOut"></div>
-          <!-- <div class="cut" id="longOut1">3</div> -->
-          <div class="cut" id="longOut1">939-(main1〜4)/4+10</div>
+          <div class="cut" id="cut1"></div>
           <div class="main" id="main1"></div>
-          <div class="shaving" id="shaving1">3</div>
-          <div class="shaving" id="shaving2">3</div>
+          <div class="shaving" id="shaving1"></div>
+          <div class="shaving" id="shaving2"></div>
           <div class="main" id="main2"></div>
-          <div class="cut" id="longIN1">3</div>
-          <div class="cut" id="longIN2">3</div>
+          <div class="cut" id="cut2"></div>
+          <div class="cut" id="cut3"></div>
           <div class="main" id="main3"></div>
-          <div class="shaving" id="shaving3">3</div>
-          <div class="shaving" id="shaving4">3</div>
+          <div class="shaving" id="shaving3"></div>
+          <div class="shaving" id="shaving4"></div>
           <div class="main" id="main4"></div>
-          <div class="cut" id="longOut2">3</div>
+          <div class="cut" id="cut4"></div>
           <div class="bottomOut"></div>
         </div>
       </div>
@@ -224,16 +228,16 @@
         <div class="two">
           <div class="topOut"></div>
           <div class="cut"></div>
-          <div class="main" id="mainText9"><u>8</u></div>
+          <div class="main" id="mainText9"><u></u></div>
           <div class="shaving"></div>
           <div class="shaving"></div>
-          <div class="main" id="mainText10"><u>9</u></div>
+          <div class="main" id="mainText10"><u></u></div>
           <div class="cut"></div>
           <div class="cut"></div>
-          <div class="main" id="mainText11">12</div>
+          <div class="main" id="mainText11"></div>
           <div class="shaving"></div>
           <div class="shaving"></div>
-          <div class="main" id="mainText12">5</div>
+          <div class="main" id="mainText12"></div>
           <div class="cut"></div>
           <div class="bottomOut">針</div>
         </div>
@@ -274,16 +278,16 @@
         <div class="five">
           <div class="topOut"></div>
           <div class="cut"></div>
-          <div class="main" id="mainText13"><u>1</u> </div>
+          <div class="main" id="mainText13"></div>
           <div class="shaving"></div>
           <div class="shaving"></div>
-          <div class="main" id="mainText14">16</div>
+          <div class="main" id="mainText14"></div>
           <div class="cut"></div>
           <div class="cut"></div>
-          <div class="main" id="mainText15">13</div>
+          <div class="main" id="mainText15"></div>
           <div class="shaving"></div>
           <div class="shaving"></div>
-          <div class="main" id="mainText16">4</div>
+          <div class="main" id="mainText16"></div>
           <div class="cut"></div>
           <div class="bottomOut"></div>
         </div>
@@ -322,6 +326,20 @@
       </div>
     </div>
   </div>
+      <div class="l-form">
+        <div class="l-m">
+          <p>くわえ幅指定</p>
+          <form name="paperMargin" id="paperMargin">
+            <input type="number" name="paperMargin" value="15" max="30">
+          </form>
+        </div>
+        <div class="l-c">
+          <p>天地合わせ幅指定</p>
+          <form name="cutMargin" id="cutMargin">
+            <input type="number" name="cutMargin" value="3" max="5">
+          </form>
+        </div>
+      </div>
   <script src="main.js"></script>
 </body>
 </html>

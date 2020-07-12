@@ -116,6 +116,22 @@ body {
   line-height: 16px;
 }
 
+.right>.main,.right>.cut,.right>.shaving {
+  width: 32px;
+  background: #fff;
+  font-size: 12px;
+  text-align: left;
+  line-height: 16px;
+}
+
+.mainSize {
+  width: 32px;
+  background: #fff;
+  font-size: 12px;
+  text-align: left;
+  line-height: 16px;
+}
+
 .topOut {
   text-align: center;
   font-size: 12px;
@@ -128,6 +144,19 @@ body {
   font-size: 12px;
   line-height: 16px;
 }
+
+/* .topOutSize {
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  height: 16px;
+}
+
+.bottomOutSize {
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+} */
 
 .right>.main {
   line-height: 128px;
@@ -149,6 +178,23 @@ select {
   font-size: large;
 }
 
+.l-form {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 64px;
+}
+
+.l-m,.l-c {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: small;
+  width: 50%;
+}
+
+.l-m>p,.l-c>p {
+  width: 20%;
+}
 
 #bookSize,#direction,#method,#paperSize {
   margin-bottom: 32px;
