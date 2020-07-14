@@ -409,8 +409,8 @@ const tgtFourDropdownMenu = document.querySelector("#method");
 
 tgtFourDropdownMenu.addEventListener('change', (e) => {
   let value = tgtFourDropdownMenu.value;
-  let cutSize = document.querySelectorAll("l-front>l-right>right>.cut");
-  cutSize = (paperLong['菊全']-(bookWidth['A4']*4))/4;
+  let cutSizeA4 = document.querySelectorAll("l-front>l-right>right>.cut");
+  cutSizeA4 = (paperLong['菊全']-(bookWidth['A4']*4))/4;
   // let cutOne = document.getElementById("cut1").textContent = (paperLong['菊全']-(bookWidth['A4']*4))/4;
   // let cutTwo = document.getElementById("cut2").textContent = (paperLong['菊全']-(bookWidth['A4']*4))/4;
   // let cutThree = document.getElementById("cut3").textContent = (paperLong['菊全']-(bookWidth['A4']*4))/4;
@@ -425,27 +425,27 @@ tgtFourDropdownMenu.addEventListener('change', (e) => {
     document.getElementById("shaving2").textContent = "3";
     document.getElementById("shaving3").textContent = "3";
     document.getElementById("shaving4").textContent = "3";
-    document.getElementById("cut1").textContent = cutSize -3;
-    document.getElementById("cut2").textContent = cutSize -3;
-    document.getElementById("cut3").textContent = cutSize -3;
-    document.getElementById("cut4").textContent = cutSize -3;
+    document.getElementById("cut1").textContent = cutSizeA4 -3;
+    document.getElementById("cut2").textContent = cutSizeA4 -3;
+    document.getElementById("cut3").textContent = cutSizeA4 -3;
+    document.getElementById("cut4").textContent = cutSizeA4 -3;
   }　else if(value === "binding") {
     document.getElementById("shaving1").textContent = "0";
     document.getElementById("shaving2").textContent = "0";
     document.getElementById("shaving3").textContent = "0";
     document.getElementById("shaving4").textContent = "0";
-    document.getElementById("cut1").textContent = cutSize -3;
-    document.getElementById("cut2").textContent = cutSize -3;
-    document.getElementById("cut3").textContent = cutSize -3;
-    document.getElementById("cut4").textContent = cutSize -3;
+    document.getElementById("cut1").textContent = cutSizeA4 -3;
+    document.getElementById("cut2").textContent = cutSizeA4 -3;
+    document.getElementById("cut3").textContent = cutSizeA4 -3;
+    document.getElementById("cut4").textContent = cutSizeA4 -3;
   } else if(value === "thread") {
     document.getElementById("shaving1").textContent = "0";
     document.getElementById("shaving2").textContent = "0";
     document.getElementById("shaving3").textContent = "0";
     document.getElementById("shaving4").textContent = "0";
-    document.getElementById("cut1").textContent = cutSize +5;
-    document.getElementById("cut2").textContent = cutSize -5;
-    document.getElementById("cut3").textContent = cutSize -5;
-    document.getElementById("cut4").textContent = cutSize +5;
+    document.getElementById("cut1").textContent = cutSizeA4 +5;
+    document.getElementById("cut2").textContent = cutSizeA4 -5;
+    document.getElementById("cut3").textContent = cutSizeA4 -5;
+    document.getElementById("cut4").textContent = cutSizeA4 +5;
   }
 });
