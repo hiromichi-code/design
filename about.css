@@ -139,7 +139,7 @@ select {
   line-height: 16px;
 }
 
-.right>.main,.right>.cut,.right>.shaving {
+.right>.rightMain,.right>.outerCut,.right>.innerCut.right>.rightShaving {
   width: 32px;
   background: #fff;
   font-size: 12px;
@@ -163,6 +163,12 @@ select {
 }
 
 .bottomOut {
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.bottomOutValue {
   text-align: center;
   font-size: 12px;
   line-height: 16px;

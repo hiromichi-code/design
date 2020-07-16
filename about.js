@@ -55,56 +55,38 @@ const tgtOneDropdownMenu = document.querySelector("#bookSize");
   
   tgtOneDropdownMenu.addEventListener('change', (e)　=> {
     let valueOne = tgtOneDropdownMenu.value;
+    let main = document.querySelectorAll(".rightMain");
+    let out = document.querySelectorAll(".bottomOutValue");
 
     if(valueOne === "bookSizeNone"){
-      document.getElementById('main1').textContent = "";
-      document.getElementById('main2').textContent = "";
-      document.getElementById('main3').textContent = "";
-      document.getElementById('main4').textContent = "";
-      document.getElementById('bottomOut1').textContent = "";
-      document.getElementById('bottomOut2').textContent = "";
+      main[0].textContent = "";
+      main[1].textContent = "";
+      main[2].textContent = "";
+      main[3].textContent = "";
+      out[0].textContent = "";
+      out[1].textContent = "";
     } else if(valueOne === "A4"){
-      document.getElementById('main1').textContent ="210";
-      document.getElementById('main2').textContent ="210";
-      document.getElementById('main3').textContent ="210";
-      document.getElementById('main4').textContent ="210";
-      document.getElementById('bottomOut1').textContent ="297";
-      document.getElementById('bottomOut2').textContent ="297";
+      main[0].textContent = "bookWidth[A4]";
+      main[1].textContent = "bookWidth[A4]";
+      main[2].textContent = "bookWidth[A4]";
+      main[3].textContent = "bookWidth[A4]";
+      out[0].textContent = "bookHeight[A4]";
+      out[1].textContent = "bookHeight[A4]";
     } else if(valueOne === "B5"){
-      document.getElementById('main1').textContent ="182";
-      document.getElementById('main2').textContent ="182";
-      document.getElementById('main3').textContent ="182";
-      document.getElementById('main4').textContent ="182";
-      document.getElementById('bottomOut1').textContent ="257";
-      document.getElementById('bottomOut2').textContent ="257";
+      main[0,1,2,3].textContent = "";
+      out[0,1].textContent = "";
     } else if(valueOne === "A5"){
-      document.getElementById('main1').textContent ="148";
-      document.getElementById('main2').textContent ="148";
-      document.getElementById('main3').textContent ="148";
-      document.getElementById('main4').textContent ="148";
-      document.getElementById('bottomOut1').textContent ="210";
-      document.getElementById('bottomOut2').textContent ="210";
+      main[0,1,2,3].textContent = "";
+      out[0,1].textContent = "";
     } else if(valueOne === "46"){
-      document.getElementById('main1').textContent ="128";
-      document.getElementById('main2').textContent ="128";
-      document.getElementById('main3').textContent ="128";
-      document.getElementById('main4').textContent ="128";
-      document.getElementById('bottomOut1').textContent ="188";
-      document.getElementById('bottomOut2').textContent ="188";
+      main[0,1,2,3].textContent = "";
+      out[0,1].textContent = "";
     } else if(valueOne === "B6"){
-      document.getElementById('main1').textContent ="128";
-      document.getElementById('main2').textContent ="128";
-      document.getElementById('main3').textContent ="128";
-      document.getElementById('main4').textContent ="128";
-      document.getElementById('bottomOut1').textContent ="182";
-      document.getElementById('bottomOut2').textContent ="182";
+      main[0,1,2,3].textContent = "";
+      out[0,1].textContent = "";
     } else if(valueOne === "A6"){
-      document.getElementById('main1').textContent ="105";
-      document.getElementById('main2').textContent ="105";
-      document.getElementById('main3').textContent ="105";
-      document.getElementById('main4').textContent ="105";
-      document.getElementById('bottomOut1').textContent ="148";
-      document.getElementById('bottomOut2').textContent ="148";
+      main[0,1,2,3].textContent = "";
+      out[0,1].textContent = "";
     }
   });
 
@@ -412,14 +394,69 @@ tgtFourDropdownMenu.addEventListener('change', (e) => {
     document.getElementById("shaving2").textContent = "";
     document.getElementById("shaving3").textContent = "";
     document.getElementById("shaving4").textContent = "";
-  } else if(value === "perfect") {
+    document.getElementById("cut1").textContent = "";
+    document.getElementById("cut2").textContent = "";
+    document.getElementById("cut3").textContent = "";
+    document.getElementById("cut4").textContent = "";
+  } 
+});
+
+tgtFourDropdownMenu.addEventListener('change', (e) => {
+  let value = tgtFourDropdownMenu.value;
+
+  if(value === "perfect"){
+      document.getElementById("shaving1").textContent = "3";
+      document.getElementById("shaving2").textContent = "3";
+      document.getElementById("shaving3").textContent = "3";
+      document.getElementById("shaving4").textContent = "3";
+      document.getElementById("cut1").textContent = cutSize[0].textContent-3;
+      document.getElementById("cut2").textContent = cutSize[1].textContent-3;
+      document.getElementById("cut3").textContent = cutSize[2].textContent-3;
+      document.getElementById("cut4").textContent = cutSize[3].textContent-3;
+  }
+});
+
+tgtFourDropdownMenu.addEventListener('change', (e) => {
+let value = tgtFourDropdownMenu.value;
+
+  if(value === "binding") {
+    document.getElementById("shaving1").textContent = "0";
+    document.getElementById("shaving2").textContent = "0";
+    document.getElementById("shaving3").textContent = "0";
+    document.getElementById("shaving4").textContent = "0";
+    document.getElementById("cut1").textContent = cutSize[0].textContent-3;
+    document.getElementById("cut2").textContent = cutSize[1].textContent-3;
+    document.getElementById("cut3").textContent = cutSize[2].textContent-3;
+    document.getElementById("cut4").textContent = cutSize[3].textContent-3;
+  }
+});
+
+tgtFourDropdownMenu.addEventListener('change', (e) => {
+let value = tgtFourDropdownMenu.value;
+
+  if(value === "sewing") {
     document.getElementById("shaving1").textContent = "3";
     document.getElementById("shaving2").textContent = "3";
     document.getElementById("shaving3").textContent = "3";
     document.getElementById("shaving4").textContent = "3";
-    document.getElementById("cut1").textContent = cutSize -3;
-    document.getElementById("cut2").textContent = cutSize -3;
-    document.getElementById("cut3").textContent = cutSize -3;
-    document.getElementById("cut4").textContent = cutSize -3;
+    document.getElementById("cut1").textContent = cutSize[0].textContent-10;
+    document.getElementById("cut2").textContent = cutSize[1].textContent+10;
+    document.getElementById("cut3").textContent = cutSize[2].textContent+10;
+    document.getElementById("cut4").textContent = cutSize[3].textContent-10;
   }
+});
+
+tgtFourDropdownMenu.addEventListener('change', (e) => {
+let value = tgtFourDropdownMenu.value;
+  if(value === "thread") {
+    document.getElementById("shaving1").textContent = "0";
+    document.getElementById("shaving2").textContent = "0";
+    document.getElementById("shaving3").textContent = "0";
+    document.getElementById("shaving4").textContent = "0";
+    document.getElementById("cut1").textContent = cutSize[0].textContent+10;
+    document.getElementById("cut2").textContent = cutSize[1].textContent-10;
+    document.getElementById("cut3").textContent = cutSize[2].textContent-10;
+    document.getElementById("cut4").textContent = cutSize[3].textContent+10;
+  }
+  console.log(e);
 });
