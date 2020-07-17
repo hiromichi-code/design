@@ -51,6 +51,12 @@ const bookHeight = {
     A3: 420
 };
 
+// くわえ、天地合わせの合計値
+const gripper = document.querySelector(".shortOutOne");
+const UpDown = document.querySelectorAll(".shortIn");
+const gripperUpDown = (("gripper.textContent")+("UpDown[0].textContent")+("UpDown[1].textContent"));
+console.log(gripperUpDown);
+
 const tgtOneDropdownMenu = document.querySelector("#bookSize");
   
   tgtOneDropdownMenu.addEventListener('change', (e)　=> {
@@ -59,34 +65,54 @@ const tgtOneDropdownMenu = document.querySelector("#bookSize");
     let out = document.querySelectorAll(".bottomOutValue");
 
     if(valueOne === "bookSizeNone"){
-      main[0].textContent = "";
-      main[1].textContent = "";
-      main[2].textContent = "";
-      main[3].textContent = "";
-      out[0].textContent = "";
-      out[1].textContent = "";
+      for(let i = 0; i < main.length; i++){
+        main[i].textContent = "";
+      }
+      for(let i = 0; i < out.length; i++){
+        out[i].textContent = "";
+      }
     } else if(valueOne === "A4"){
-      main[0].textContent = "bookWidth[A4]";
-      main[1].textContent = "bookWidth[A4]";
-      main[2].textContent = "bookWidth[A4]";
-      main[3].textContent = "bookWidth[A4]";
-      out[0].textContent = "bookHeight[A4]";
-      out[1].textContent = "bookHeight[A4]";
+      for(let i = 0; i < main.length; i++){
+        main[i].textContent = bookWidth["A4"];
+      }
+      for(let i = 0; i < out.length; i++){
+        out[i].textContent = bookHeight["A4"];
+      }
     } else if(valueOne === "B5"){
-      main[0,1,2,3].textContent = "";
-      out[0,1].textContent = "";
+      for(let i = 0; i < main.length; i++){
+        main[i].textContent = bookWidth["B5"];
+      }
+      for(let i = 0; i < out.length; i++){
+        out[i].textContent = bookHeight["B5"];
+      }
     } else if(valueOne === "A5"){
-      main[0,1,2,3].textContent = "";
-      out[0,1].textContent = "";
+      for(let i = 0; i < main.length; i++){
+        main[i].textContent = bookWidth["A5"];
+      }
+      for(let i = 0; i < out.length; i++){
+        out[i].textContent = bookHeight["A5"];
+      }
     } else if(valueOne === "46"){
-      main[0,1,2,3].textContent = "";
-      out[0,1].textContent = "";
+      for(let i = 0; i < main.length; i++){
+        main[i].textContent = bookWidth["四六判"];
+      }
+      for(let i = 0; i < out.length; i++){
+        out[i].textContent = bookHeight["四六判"];
+      }
     } else if(valueOne === "B6"){
-      main[0,1,2,3].textContent = "";
-      out[0,1].textContent = "";
+      for(let i = 0; i < main.length; i++){
+        main[i].textContent = bookWidth["B6"];
+      }
+      for(let i = 0; i < out.length; i++){
+        out[i].textContent = bookHeight["B6"];
+      }
     } else if(valueOne === "A6"){
-      main[0,1,2,3].textContent = "";
-      out[0,1].textContent = "";
+      for(let i = 0; i < main.length; i++){
+        main[i].textContent = bookWidth["A6"];
+      }
+      for(let i = 0; i < out.length; i++){
+        out[i].textContent = bookHeight["A6"];
+      }
     }
   });
 
@@ -318,78 +344,93 @@ const tgtThreeDropdownMenu = document.querySelector("#paperSize");
 
 tgtThreeDropdownMenu.addEventListener('change',(e) => {
   let value = tgtThreeDropdownMenu.value;
+  const PANEL_COUNT_width = 4;
+  const PANEL_COUNT_height = 2;
+  const CUT_COUNT = 4;
+  const kAllLongA4 = (paperLong['菊全']-(bookWidth['A4']*PANEL_COUNT_width))/CUT_COUNT;
+  const kAllShortA4 = (paperShort['菊全']-(bookHeight['A4']*PANEL_COUNT_height))-gripperUpDown;
+  const aAllLongA4 = (paperLong['A全']-(bookWidth['A4']*PANEL_COUNT_width))/CUT_COUNT;
+  const aAllShortA4 = (paperShort['A全']-(bookHeight['A4']*PANEL_COUNT_height))-gripperUpDown;
+  let outerCut = document.querySelectorAll(".outerCut");
+  let innerCut = document.querySelectorAll(".innerCut");
+  let shortOut = document.querySelector(".shortOut");
 
   if(value === "paperSizeNone"){
-    document.getElementById("cut1").textContent = "";
-    document.getElementById("cut2").textContent = "";
-    document.getElementById("cut3").textContent = "";
-    document.getElementById("cut4").textContent = "";
-    document.getElementById("shortOut2").textContent = "";
+    outerCut[0].textContent = "";
+    outerCut[1].textContent = "";
+    innerCut[0].textContent = "";
+    innerCut[1].textContent = "";
+    shortOut.textContent = kAllShortA4;
   }else if(value === "kAll"){
-    document.getElementById("cut1").textContent = (paperLong['菊全']-(bookWidth['A4']*4))/4;
-    document.getElementById("cut2").textContent = (paperLong['菊全']-(bookWidth['A4']*4))/4;
-    document.getElementById("cut3").textContent = (paperLong['菊全']-(bookWidth['A4']*4))/4;
-    document.getElementById("cut4").textContent = (paperLong['菊全']-(bookWidth['A4']*4))/4;
-    document.getElementById("shortOut2").textContent = (paperShort['菊全']-(bookHeight['A4']*2))-21;
+    outerCut[0].textContent = kAllLongA4;
+    outerCut[1].textContent = kAllLongA4;
+    innerCut[0].textContent = kAllLongA4;
+    innerCut[1].textContent = kAllLongA4;
+    shortOut.textContent = kAllShortA4;
   }else if(value === "aAll"){
-    document.getElementById("cut1").textContent = (paperLong['A全']-(bookWidth['A4']*4))/4;
-    document.getElementById("cut2").textContent = (paperLong['A全']-(bookWidth['A4']*4))/4;
-    document.getElementById("cut3").textContent = (paperLong['A全']-(bookWidth['A4']*4))/4;
-    document.getElementById("cut4").textContent = (paperLong['A全']-(bookWidth['A4']*4))/4;
-    document.getElementById("shortOut2").textContent = (paperShort['A全']-(bookHeight['A4']*2))-21;
-  }else if(value === "46Half"){
-    document.getElementById("cut1").textContent = (paperLong['四六半']-(bookWidth['B5']*4))/4;
-    document.getElementById("cut2").textContent = (paperLong['四六半']-(bookWidth['B5']*4))/4;
-    document.getElementById("cut3").textContent = (paperLong['四六半']-(bookWidth['B5']*4))/4;
-    document.getElementById("cut4").textContent = (paperLong['四六半']-(bookWidth['B5']*4))/4;
-    document.getElementById("shortOut2").textContent = (paperShort['四六半']-(bookHeight['B5']*2))-21;
-  }else if(value === "kHalf"){
-    document.getElementById("cut1").textContent = (paperLong['菊半']-(bookWidth['A5']*4))/4;
-    document.getElementById("cut2").textContent = (paperLong['菊半']-(bookWidth['A5']*4))/4;
-    document.getElementById("cut3").textContent = (paperLong['菊半']-(bookWidth['A5']*4))/4;
-    document.getElementById("cut4").textContent = (paperLong['菊半']-(bookWidth['A5']*4))/4;
-    document.getElementById("shortOut2").textContent = (paperShort['菊半']-(bookHeight['A4']*2))-21;
-  }else if(value === "aHalf"){
-    document.getElementById("cut1").textContent = (paperLong['A半']-(bookWidth['A5']*4))/4;
-    document.getElementById("cut2").textContent = (paperLong['A半']-(bookWidth['A5']*4))/4;
-    document.getElementById("cut3").textContent = (paperLong['A半']-(bookWidth['A5']*4))/4;
-    document.getElementById("cut4").textContent = (paperLong['A半']-(bookWidth['A5']*4))/4;
-    document.getElementById("shortOut2").textContent = (paperShort['A半']-(bookHeight['A4']*2))-21;
-  }else if(value === "kHalfHalf"){
-    document.getElementById("cut1").textContent = (paperLong['菊四']-(bookWidth['A6']*4))/4;
-    document.getElementById("cut2").textContent = (paperLong['菊四']-(bookWidth['A6']*4))/4;
-    document.getElementById("cut3").textContent = (paperLong['菊四']-(bookWidth['A6']*4))/4;
-    document.getElementById("cut4").textContent = (paperLong['菊四']-(bookWidth['A6']*4))/4;
-    document.getElementById("shortOut2").textContent = (paperShort['菊四']-(bookHeight['A6']*2))-21;
-  }else if(value === "aHalfHalf"){
-    document.getElementById("cut1").textContent = (paperLong['A四']-(bookWidth['A6']*4))/4;
-    document.getElementById("cut2").textContent = (paperLong['A四']-(bookWidth['A6']*4))/4;
-    document.getElementById("cut3").textContent = (paperLong['A四']-(bookWidth['A6']*4))/4;
-    document.getElementById("cut4").textContent = (paperLong['A四']-(bookWidth['A6']*4))/4;
-    document.getElementById("shortOut2").textContent = (paperShort['A四']-(bookHeight['A6']*2))-21;
-  }else if(value === "46HalfHalf"){
-    document.getElementById("cut1").textContent = (paperLong['四六四']-(bookWidth['B6']*4))/4;
-    document.getElementById("cut2").textContent = (paperLong['四六四']-(bookWidth['B6']*4))/4;
-    document.getElementById("cut3").textContent = (paperLong['四六四']-(bookWidth['B6']*4))/4;
-    document.getElementById("cut4").textContent = (paperLong['四六四']-(bookWidth['B6']*4))/4;
-    document.getElementById("shortOut2").textContent = (paperShort['四六四']-(bookHeight['B6']*2))-21;
-  }else if(value === "46HalfHalf"){
-    document.getElementById("cut1").textContent = (paperLong['四六四']-(bookWidth['四六判']*4))/4;
-    document.getElementById("cut2").textContent = (paperLong['四六四']-(bookWidth['四六判']*4))/4;
-    document.getElementById("cut3").textContent = (paperLong['四六四']-(bookWidth['四六判']*4))/4;
-    document.getElementById("cut4").textContent = (paperLong['四六四']-(bookWidth['四六判']*4))/4;
-    document.getElementById("shortOut2").textContent = (paperShort['四六四']-(bookHeight['四六判']*2))-21;
+    outerCut[0].textContent = aAllLongA4;
+    outerCut[1].textContent = aAllLongA4;
+    innerCut[0].textContent = aAllLongA4;
+    innerCut[1].textContent = aAllLongA4;
+    shortOut.textContent = aAllShortA4;
+  // }else if(value === "46Half"){
+  //   document.getElementById("cut1").textContent = (paperLong['四六半']-(bookWidth['B5']*4))/4;
+  //   document.getElementById("cut2").textContent = (paperLong['四六半']-(bookWidth['B5']*4))/4;
+  //   document.getElementById("cut3").textContent = (paperLong['四六半']-(bookWidth['B5']*4))/4;
+  //   document.getElementById("cut4").textContent = (paperLong['四六半']-(bookWidth['B5']*4))/4;
+  //   document.getElementById("shortOut2").textContent = (paperShort['四六半']-(bookHeight['B5']*2))-21;
+  // }else if(value === "kHalf"){
+  //   document.getElementById("cut1").textContent = (paperLong['菊半']-(bookWidth['A5']*4))/4;
+  //   document.getElementById("cut2").textContent = (paperLong['菊半']-(bookWidth['A5']*4))/4;
+  //   document.getElementById("cut3").textContent = (paperLong['菊半']-(bookWidth['A5']*4))/4;
+  //   document.getElementById("cut4").textContent = (paperLong['菊半']-(bookWidth['A5']*4))/4;
+  //   document.getElementById("shortOut2").textContent = (paperShort['菊半']-(bookHeight['A4']*2))-21;
+  // }else if(value === "aHalf"){
+  //   document.getElementById("cut1").textContent = (paperLong['A半']-(bookWidth['A5']*4))/4;
+  //   document.getElementById("cut2").textContent = (paperLong['A半']-(bookWidth['A5']*4))/4;
+  //   document.getElementById("cut3").textContent = (paperLong['A半']-(bookWidth['A5']*4))/4;
+  //   document.getElementById("cut4").textContent = (paperLong['A半']-(bookWidth['A5']*4))/4;
+  //   document.getElementById("shortOut2").textContent = (paperShort['A半']-(bookHeight['A4']*2))-21;
+  // }else if(value === "kHalfHalf"){
+  //   document.getElementById("cut1").textContent = (paperLong['菊四']-(bookWidth['A6']*4))/4;
+  //   document.getElementById("cut2").textContent = (paperLong['菊四']-(bookWidth['A6']*4))/4;
+  //   document.getElementById("cut3").textContent = (paperLong['菊四']-(bookWidth['A6']*4))/4;
+  //   document.getElementById("cut4").textContent = (paperLong['菊四']-(bookWidth['A6']*4))/4;
+  //   document.getElementById("shortOut2").textContent = (paperShort['菊四']-(bookHeight['A6']*2))-21;
+  // }else if(value === "aHalfHalf"){
+  //   document.getElementById("cut1").textContent = (paperLong['A四']-(bookWidth['A6']*4))/4;
+  //   document.getElementById("cut2").textContent = (paperLong['A四']-(bookWidth['A6']*4))/4;
+  //   document.getElementById("cut3").textContent = (paperLong['A四']-(bookWidth['A6']*4))/4;
+  //   document.getElementById("cut4").textContent = (paperLong['A四']-(bookWidth['A6']*4))/4;
+  //   document.getElementById("shortOut2").textContent = (paperShort['A四']-(bookHeight['A6']*2))-21;
+  // }else if(value === "46HalfHalf"){
+  //   document.getElementById("cut1").textContent = (paperLong['四六四']-(bookWidth['B6']*4))/4;
+  //   document.getElementById("cut2").textContent = (paperLong['四六四']-(bookWidth['B6']*4))/4;
+  //   document.getElementById("cut3").textContent = (paperLong['四六四']-(bookWidth['B6']*4))/4;
+  //   document.getElementById("cut4").textContent = (paperLong['四六四']-(bookWidth['B6']*4))/4;
+  //   document.getElementById("shortOut2").textContent = (paperShort['四六四']-(bookHeight['B6']*2))-21;
+  // }else if(value === "46HalfHalf"){
+  //   document.getElementById("cut1").textContent = (paperLong['四六四']-(bookWidth['四六判']*4))/4;
+  //   document.getElementById("cut2").textContent = (paperLong['四六四']-(bookWidth['四六判']*4))/4;
+  //   document.getElementById("cut3").textContent = (paperLong['四六四']-(bookWidth['四六判']*4))/4;
+  //   document.getElementById("cut4").textContent = (paperLong['四六四']-(bookWidth['四六判']*4))/4;
+  //   document.getElementById("shortOut2").textContent = (paperShort['四六四']-(bookHeight['四六判']*2))-21;
   }
 });
 
 // 製本方法選択処理
 
 const tgtFourDropdownMenu = document.querySelector("#method");
-let cutSize = document.querySelectorAll(".l-front>.l-right>.right>.cut");
+let outerCutSize = document.querySelectorAll(".l-front>.l-right>.right>.outerCut");
+let innerCutSize = document.querySelectorAll(".l-front>.l-right>.right>.innerCut");
 
 tgtFourDropdownMenu.addEventListener('change', (e) => {
   let value = tgtFourDropdownMenu.value;
   if(value === "methodNone") {
+    outerCutSize[0].textContent = "";
+    innerCutSize[0].textContent = "";
+    innerCutSize[1].textContent = "";
+    outerCutSize[1].textContent = "";
     document.getElementById("shaving1").textContent = "";
     document.getElementById("shaving2").textContent = "";
     document.getElementById("shaving3").textContent = "";
@@ -409,10 +450,10 @@ tgtFourDropdownMenu.addEventListener('change', (e) => {
       document.getElementById("shaving2").textContent = "3";
       document.getElementById("shaving3").textContent = "3";
       document.getElementById("shaving4").textContent = "3";
-      document.getElementById("cut1").textContent = cutSize[0].textContent-3;
-      document.getElementById("cut2").textContent = cutSize[1].textContent-3;
-      document.getElementById("cut3").textContent = cutSize[2].textContent-3;
-      document.getElementById("cut4").textContent = cutSize[3].textContent-3;
+      document.getElementById("cut1").textContent = outerCutSize[0].textContent-3;
+      document.getElementById("cut2").textContent = innerCutSize[0].textContent-3;
+      document.getElementById("cut3").textContent = innerCutSize[1].textContent-3;
+      document.getElementById("cut4").textContent = outerCutSize[1].textContent-3;
   }
 });
 

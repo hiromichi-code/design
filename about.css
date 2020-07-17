@@ -139,20 +139,24 @@ select {
   line-height: 16px;
 }
 
-.right>.rightMain,.right>.outerCut,.right>.innerCut.right>.rightShaving {
+.right>.outerCut,.right>.innerCut,.right>.rightShaving {
   width: 32px;
   background: #fff;
   font-size: 12px;
   text-align: left;
   line-height: 16px;
+  height: 16px;
+  margin: 1px;
 }
 
-.mainSize {
+.right>.rightMain{
   width: 32px;
   background: #fff;
   font-size: 12px;
   text-align: left;
   line-height: 16px;
+  height: 128px;
+  margin: 1px;
 }
 
 .topOut {
@@ -168,13 +172,31 @@ select {
   line-height: 16px;
 }
 
+.shortOutOne {
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.shortOut {
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.shortIn {
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+}
+
 .bottomOutValue {
   text-align: center;
   font-size: 12px;
   line-height: 16px;
 }
 
-.right>.main {
+.right>.rightMain {
   line-height: 128px;
 }
 
