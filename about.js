@@ -429,13 +429,7 @@ tgtFourDropdownMenu.addEventListener('change', (e) => {
     shaving[1].textContent = "";
     shaving[2].textContent = "";
     shaving[3].textContent = "";
-  } 
-});
-
-tgtFourDropdownMenu.addEventListener('change', (e) => {
-  let value = tgtFourDropdownMenu.value;
-
-  if(value === "perfect"){
+  } else if (value === "perfect"){
     outerCutSize[0].textContent = outerCutSize[0].textContent-shavingApply;
     innerCutSize[0].textContent = innerCutSize[0].textContent-shavingApply;
     innerCutSize[1].textContent = innerCutSize[1].textContent-shavingApply;
@@ -444,13 +438,7 @@ tgtFourDropdownMenu.addEventListener('change', (e) => {
     shaving[1].textContent = shavingApply;
     shaving[2].textContent = shavingApply;
     shaving[3].textContent = shavingApply;
-  }
-});
-
-tgtFourDropdownMenu.addEventListener('change', (e) => {
-let value = tgtFourDropdownMenu.value;
-
-  if(value === "binding") {
+  }else if(value === "binding") {
     outerCutSize[0].textContent = kAllLongA4;
     innerCutSize[0].textContent = kAllLongA4;
     innerCutSize[1].textContent = kAllLongA4;
@@ -459,13 +447,7 @@ let value = tgtFourDropdownMenu.value;
     shaving[1].textContent = cutNone;
     shaving[2].textContent = cutNone;
     shaving[3].textContent = cutNone;
-  }
-});
-
-tgtFourDropdownMenu.addEventListener('change', (e) => {
-let value = tgtFourDropdownMenu.value;
-
-  if(value === "sewing") {
+  }else if(value === "sewing") {
     outerCutSize[0].textContent = kAllLongA4-outWrap;
     innerCutSize[0].textContent = kAllLongA4+outWrap;
     innerCutSize[1].textContent = kAllLongA4+outWrap
@@ -474,12 +456,7 @@ let value = tgtFourDropdownMenu.value;
     shaving[1].textContent = cutNone;
     shaving[2].textContent = cutNone;
     shaving[3].textContent = cutNone;
-  }
-});
-
-tgtFourDropdownMenu.addEventListener('change', (e) => {
-let value = tgtFourDropdownMenu.value;
-  if(value === "thread") {
+  }else if(value === "thread") {
     outerCutSize[0].textContent = kAllLongA4+outWrap;
     innerCutSize[0].textContent = kAllLongA4-outWrap;
     innerCutSize[1].textContent = kAllLongA4-outWrap
@@ -489,5 +466,4 @@ let value = tgtFourDropdownMenu.value;
     shaving[2].textContent = cutNone;
     shaving[3].textContent = cutNone;
   }
-  console.log(e);
 });
