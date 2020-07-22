@@ -385,10 +385,10 @@ const tgtOneDropdownMenu = document.querySelector("#bookSize");
   });
 
 
-const tgtA4DropdownMenu = document.querySelector(".paperSizeA4");
+const tgtA4DropdownMenu = document.querySelector("#paperSizeA4");
 
 tgtA4DropdownMenu.addEventListener('change',(e) => {
-  let value = tgtA4DropdownMenu.value;
+let value = tgtA4DropdownMenu.value;
 
   if(value === "paperSizeNone"){
     outerCut[0].textContent = "";
