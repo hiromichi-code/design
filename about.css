@@ -205,3 +205,6 @@ select {
 
 
 /* variable */
+.is-hidden {
+  display: none;
+}
