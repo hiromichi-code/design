@@ -7,7 +7,7 @@ const tgtOneDropdownMenu = document.querySelector("#bookSize");
     let main = document.querySelectorAll(".rightMain");
     let out = document.querySelectorAll(".bottomOutValue");
 
-    if(valueOne === "bookSizeNone"){
+    if(valueOne === ""){
       for(let i = 0; i < main.length; i++){
         main[i].textContent = "";
       }
