@@ -318,7 +318,7 @@ let shaving = document.querySelectorAll(".rightShaving");
 
 tgtFourDropdownMenu.addEventListener('change', (e) => {
   let value = tgtFourDropdownMenu.value;
-  if(value === "methodNone") {
+  if(value === "") {
     outerCutSize[0].textContent = "";
     innerCutSize[0].textContent = "";
     innerCutSize[1].textContent = "";
