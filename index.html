@@ -13,16 +13,17 @@
     <p>このアプリケーションでは製本を伴う案件の印刷面付けを選択式で完成させます。詳しい製本知識は不用です。まずは下のセレクターで本のサイズを選択してください。</p>
   </header>
   <div class="l-selector">
-    <select name="bookSize" onChange="location.href = value">
+    <select name="bookSize" onChange="location.href = value" id="#bookSize">
       <option value="">仕上げサイズを選択</option>
-      <option value="a4.html">A4</option>
-      <option value="a5.html">A5</option>
-      <option value="b5.html">B5</option>
-      <option value="b6.html">B6</option>
-      <option value="four-six.html">四六判</option>
-      <option value="a6.html">A6</option>
+      <option value="a4.html" class="A4">A4</option>
+      <option value="a5.html" class="A5">A5</option>
+      <option value="b5.html" class="B5">B5</option>
+      <option value="b6.html" class="B6">B6</option>
+      <option value="four-six.html" class="46">四六判</option>
+      <option value="a6.html" class="A6">A6</option>
     </select>
   </div>
-  <script src="index.js"></script>
+  <script src="about.js"></script>
+  <script src="variable.js"></script>
 </body>
 </html>

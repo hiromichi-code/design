@@ -9,7 +9,8 @@ body {
 select {
   margin: 16px auto;
   font-size: medium;
-  width: 14%;
+  width: 24%;
+  height: 32px;
 }
 
 /* layout */
@@ -25,24 +26,58 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 0 4%;
 }
 
+.l-header .l-header-main span {
+  -webkit-animation: color-change 5s linear infinite;
+          animation: color-change 5s linear infinite;
+  margin: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+@-webkit-keyframes color-change {
+  0%, 100% {
+    color: red;
+  }
+  25% {
+    color: #fff;
+  }
+  50% {
+    color: purple;
+  }
+  75% {
+    color: #fff;
+  }
+}
+
+@keyframes color-change {
+  0%, 100% {
+    color: red;
+  }
+  25% {
+    color: #fff;
+  }
+  50% {
+    color: purple;
+  }
+  75% {
+    color: #fff;
+  }
+}
+
 .l-selector {
-  height: 128px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: wrap column;
-          flex-flow: wrap column;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
-  margin: 64px auto;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 64px 0 0 640px;
 }
 
 /* theme */

@@ -12,42 +12,34 @@
     <div class="l-header">
       <div class="l-header-main">
         <h1>Book Layout Free</h1>
-        <h1>A4 size</h1>
+        <h1><span>A4 size</span></h1>
       </div>
     </div>
   </header>
   <div class="l-selector">
-    <!-- <select name="bookSize" id="bookSize">
-      <option value="">仕上げサイズを選択</option>
-      <option value="A4">A4</option>
-      <option value="A5">A5</option>
-      <option value="B5">B5</option>
-      <option value="B6">B6</option>
-      <option value="46">四六判</option>
-      <option value="A6">A6</option>
-    </select> -->
-    <select name="paperSizeA4" id="paperSizeA4">
-      <option value="paperSizeNone">印刷用紙サイズを選択</option>
-      <option value="kAll">菊全</option>
-      <option value="aAll">A全</option>
-    </select>
-    <!-- <select name="paperSizeB5" id="paperSizeB5">
-      <option value="paperSizeNone">印刷用紙サイズを選択</option>
-      <option value="46Half">四六半裁</option>
-      <option value="46Half">B半裁</option>
-    </select> -->
-    <select name="bookMethod" id="method">
-      <option value="">製本方法を選択</option>
-      <option value="perfect">無線綴じ・PUR無線綴じ・平綴じ</option>
-      <option value="binding">アジロ綴じ</option>
-      <option value="thread">糸かがり</option>
-      <!-- <option value="sewing">中綴じ・中ミシン</option> -->
-    </select>
-    <select name="bookDirection" id="direction">
-      <option value="directionNone">綴じ方向を選択</option>
-      <option value="left">左綴じ</option>
-      <option value="right">右綴じ</option>
-    </select>
+    <label>１
+      <select name="paperSizeA4" id="paperSizeA4">
+        <option value="paperSizeNone">印刷用紙サイズを選択</option>
+        <option value="kAll">菊全</option>
+        <option value="aAll">A全</option>
+      </select>
+    </label>
+    <label>2
+      <select name="bookMethod" id="method">
+        <option value="">製本方法を選択</option>
+        <option value="perfect">無線綴じ・PUR無線綴じ・平綴じ</option>
+        <option value="binding">アジロ綴じ</option>
+        <option value="thread">糸かがり</option>
+        <!-- <option value="sewing">中綴じ・中ミシン</option> -->
+      </select>
+    </label>
+    <label>3
+      <select name="bookDirection" id="direction">
+        <option value="directionNone">綴じ方向を選択</option>
+        <option value="left">左綴じ</option>
+        <option value="right">右綴じ</option>
+      </select>
+    </label>
   </div>
     <div class="l-eight">
       <div class="l-front">
@@ -339,5 +331,6 @@
   <script src="about.js"></script>
   <script src="variable.js"></script>
   <script src="function.js"></script>
+  <script src="a4.js"></script>
 </body>
 </html>

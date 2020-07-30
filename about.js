@@ -1,66 +1,64 @@
 'use strict';
 
-const tgtOneDropdownMenu = document.querySelector("#bookSize");
+// const tgtOneDropdownMenu = document.querySelector("#bookSize");
   
-  tgtOneDropdownMenu.addEventListener('change', (e)　=> {
-    let valueOne = tgtOneDropdownMenu.value;
-    let main = document.querySelectorAll(".rightMain");
-    let out = document.querySelectorAll(".bottomOutValue");
+//   tgtOneDropdownMenu.addEventListener('change', (e)　=> {
+//     let valueOne = tgtOneDropdownMenu.value;
+//     let main = document.querySelectorAll(".rightMain");
+//     let out = document.querySelectorAll(".bottomOutValue");
 
-    if(valueOne === ""){
-      for(let i = 0; i < main.length; i++){
-        main[i].textContent = "";
-      }
-      for(let i = 0; i < out.length; i++){
-        out[i].textContent = "";
-      }
-    } else if(valueOne === "A4"){
-      for(let i = 0; i < main.length; i++){
-        main[i].textContent = bookWidth["A4"];
-      }
-      for(let i = 0; i < out.length; i++){
-        out[i].textContent = bookHeight["A4"];
-      }
-    } else if(valueOne === "B5"){
-      for(let i = 0; i < main.length; i++){
-        main[i].textContent = bookWidth["B5"];
-      }
-      for(let i = 0; i < out.length; i++){
-        out[i].textContent = bookHeight["B5"];
-      }
-    } else if(valueOne === "A5"){
-      for(let i = 0; i < main.length; i++){
-        main[i].textContent = bookWidth["A5"];
-      }
-      for(let i = 0; i < out.length; i++){
-        out[i].textContent = bookHeight["A5"];
-      }
-    } else if(valueOne === "46"){
-      for(let i = 0; i < main.length; i++){
-        main[i].textContent = bookWidth["四六判"];
-      }
-      for(let i = 0; i < out.length; i++){
-        out[i].textContent = bookHeight["四六判"];
-      }
-    } else if(valueOne === "B6"){
-      for(let i = 0; i < main.length; i++){
-        main[i].textContent = bookWidth["B6"];
-      }
-      for(let i = 0; i < out.length; i++){
-        out[i].textContent = bookHeight["B6"];
-      }
-    } else if(valueOne === "A6"){
-      for(let i = 0; i < main.length; i++){
-        main[i].textContent = bookWidth["A6"];
-      }
-      for(let i = 0; i < out.length; i++){
-        out[i].textContent = bookHeight["A6"];
-      }
-    }
+//     if(valueOne === ""){
+//       for(let i = 0; i < main.length; i++){
+//         main[i].textContent = "";
+//       }
+//       for(let i = 0; i < out.length; i++){
+//         out[i].textContent = "";
+//       }
+//     } else if(valueOne === "A4"){
+//       for(let i = 0; i < main.length; i++){
+//         main[i].textContent = bookWidth["A4"];
+//       }
+//       for(let i = 0; i < out.length; i++){
+//         out[i].textContent = bookHeight["A4"];
+//       }
+//     } else if(valueOne === "B5"){
+//       for(let i = 0; i < main.length; i++){
+//         main[i].textContent = bookWidth["B5"];
+//       }
+//       for(let i = 0; i < out.length; i++){
+//         out[i].textContent = bookHeight["B5"];
+//       }
+//     } else if(valueOne === "A5"){
+//       for(let i = 0; i < main.length; i++){
+//         main[i].textContent = bookWidth["A5"];
+//       }
+//       for(let i = 0; i < out.length; i++){
+//         out[i].textContent = bookHeight["A5"];
+//       }
+//     } else if(valueOne === "46"){
+//       for(let i = 0; i < main.length; i++){
+//         main[i].textContent = bookWidth["四六判"];
+//       }
+//       for(let i = 0; i < out.length; i++){
+//         out[i].textContent = bookHeight["四六判"];
+//       }
+//     } else if(valueOne === "B6"){
+//       for(let i = 0; i < main.length; i++){
+//         main[i].textContent = bookWidth["B6"];
+//       }
+//       for(let i = 0; i < out.length; i++){
+//         out[i].textContent = bookHeight["B6"];
+//       }
+//     } else if(valueOne === "A6"){
+//       for(let i = 0; i < main.length; i++){
+//         main[i].textContent = bookWidth["A6"];
+//       }
+//       for(let i = 0; i < out.length; i++){
+//         out[i].textContent = bookHeight["A6"];
+//       }
+//     }
     
-  });
-
-
+//   });
 
   const tgtDropdownMenu = document.querySelector("#direction");
 

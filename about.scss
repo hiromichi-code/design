@@ -8,7 +8,8 @@ body {
 select {
   margin: 16px auto;
   font-size: medium;
-  width: 14%;
+  width: 24%;
+  height: 32px;
 }
 
 /* layout */
@@ -21,17 +22,40 @@ select {
 
   .l-header-main {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0 4%;
+
+     span {
+      animation: color-change 5s linear infinite;
+      margin:20px;
+      font-size:30px;
+        font-weight: bold;
+    }
+    
+    @keyframes color-change {
+      0%,100%{
+        color: red;
+      }
+    
+      25%{
+        color: #fff;
+      }
+      
+      50%{
+        color: purple;
+      }
+      
+      75%{
+        color: #fff;
+      }
+    }
   }
 }
 
 .l-selector {
-  height: 128px;
   display: flex;
-  flex-flow: wrap column;
-  align-content: space-around;
-  margin: 64px auto;
+  flex-direction: column;
+  margin: 64px 0 0 640px;
 }
 
 /* theme */
