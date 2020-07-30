@@ -1,0 +1,203 @@
+/* base */
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* module  */
+select {
+  margin: 16px auto;
+  font-size: medium;
+  width: 14%;
+}
+
+/* layout */
+.l-header {
+  height: 96px;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  color: #fff;
+
+  .l-header-main {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 4%;
+  }
+}
+
+.l-selector {
+  height: 128px;
+  display: flex;
+  flex-flow: wrap column;
+  align-content: space-around;
+  margin: 64px auto;
+}
+
+/* theme */
+
+/* state */
+/* 8面レイアウト */
+.main {
+  height: 128px;
+  width: 200px;
+  margin: 1px;
+  text-align: center;
+  line-height: 128px;
+  font-size: 48px;
+}
+
+.cut {
+  height: 16px;
+  width: 200px;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  margin: 1px;
+}
+
+.shaving {
+  height: 16px;
+  width: 200px;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  margin: 1px;
+}
+
+.l-eight {
+  margin: 64px auto 160px auto;
+  display: flex;
+  justify-content: space-around;
+  color: slategrey;
+}
+
+.l-front {
+  display: flex;
+}
+
+.l-back {
+  display: flex;
+}
+
+.l-left {
+  display: flex;
+}
+
+.l-right {
+  display: flex;
+}
+
+.one>.main,.one>.cut,.one>.shaving {
+  width: 16px;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+}
+
+.three>.main,.three>.cut,.three>.shaving {
+  width: 16px;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+}
+
+.four>.main,.four>.cut,.four>.shaving {
+  width: 16px;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+}
+
+.six>.main,.six>.cut,.six>.shaving {
+  width: 16px;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+}
+
+.left>.main,.left>.cut,.left>.shaving {
+  width: 32px;
+  background: #fff;
+  font-size: 12px;
+  text-align: right;
+  line-height: 16px;
+}
+
+.right>.main,.right>.cut,.right>.shaving {
+  width: 32px;
+  background: #fff;
+  font-size: 12px;
+  text-align: left;
+  line-height: 16px;
+}
+
+.right>.outerCut,.right>.innerCut,.right>.rightShaving {
+  width: 32px;
+  background: #fff;
+  font-size: 12px;
+  text-align: left;
+  line-height: 16px;
+  height: 16px;
+  margin: 1px;
+}
+
+.right>.rightMain{
+  width: 32px;
+  background: #fff;
+  font-size: 12px;
+  text-align: left;
+  line-height: 16px;
+  height: 128px;
+  margin: 1px;
+}
+
+.topOut {
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  height: 16px;
+}
+
+.bottomOut {
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.shortOutOne {
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.shortOut {
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.shortIn {
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.bottomOutValue {
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.right>.rightMain {
+  line-height: 128px;
+}
+
+/* 16面レイアウト */
+
+
+
+/* variable */
+.is-hidden {
+  display: none;
+}

@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  background: #DAD299;
+  background: -webkit-gradient(linear, left top, right top, from(#B0DAB9), to(#DAD299));
+  background: linear-gradient(to right, #B0DAB9, #DAD299);
+}
+
+header {
+  margin-top: 112px;
+}
+
+header h1 {
+  margin: 0 0 0 240px;
+  color: #fff;
+  font-size: 64px;
+}
+
+header p {
+  display: block;
+  width: 320px;
+  margin-left: 240px;
+  color: #fff;
+}
+
+select {
+  margin: 64px 0 0 240px;
+  height: 24px;
+  border: green solid 1px;
+}
+/*# sourceMappingURL=style.css.map */

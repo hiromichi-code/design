@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+}
+
+header {
+  margin-top: 112px;
+
+  h1 {
+    margin: 0 0 0 240px;
+    color: #fff;
+    font-size: 64px;
+  }
+  p {
+    display: block;
+    width: 320px;
+    margin-left: 240px;
+    color: #fff;
+  }
+}
+
+select {
+  margin: 64px 0 0 240px;
+  height: 24px;
+  border: green solid 1px;
+}

@@ -1,18 +1,8 @@
+@charset "UTF-8";
 /* base */
 body {
   margin: 0px;
   padding: 0px;
-}
-
-h1 {
-  margin: 0px;
-  width: 40%;
-  height: 64px;
-}
-
-p {
-  margin: 0px;
-  width: 60%;
 }
 
 /* module  */
@@ -24,25 +14,38 @@ select {
 
 /* layout */
 .l-header {
-  height: 256px;
-  background: #DAD299; 
-  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  height: 96px;
+  background: #DAD299;
+  background: -webkit-gradient(linear, left top, right top, from(#B0DAB9), to(#DAD299));
+  background: linear-gradient(to right, #B0DAB9, #DAD299);
   color: #fff;
-  padding-top: 64px;
-  padding-left: 302px;
+}
+
+.l-header .l-header-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 4%;
 }
 
 .l-selector {
   height: 128px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: wrap column;
-  align-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap column;
+          flex-flow: wrap column;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
   margin: 64px auto;
 }
 
 /* theme */
-
 /* state */
 /* 8面レイアウト */
 .main {
@@ -57,73 +60,84 @@ select {
 .cut {
   height: 16px;
   width: 200px;
-  background: #DAD299; 
-  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: #DAD299;
+  background: -webkit-gradient(linear, left top, right top, from(#B0DAB9), to(#DAD299));
+  background: linear-gradient(to right, #B0DAB9, #DAD299);
   margin: 1px;
 }
 
 .shaving {
   height: 16px;
   width: 200px;
-  background: #DAD299; 
-  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: #DAD299;
+  background: -webkit-gradient(linear, left top, right top, from(#B0DAB9), to(#DAD299));
+  background: linear-gradient(to right, #B0DAB9, #DAD299);
   margin: 1px;
 }
 
 .l-eight {
   margin: 64px auto 160px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   color: slategrey;
 }
 
 .l-front {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .l-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .l-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .l-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
-.one>.main,.one>.cut,.one>.shaving {
+.one > .main, .one > .cut, .one > .shaving {
   width: 16px;
-  background: #DAD299; 
-  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: #DAD299;
+  background: -webkit-gradient(linear, left top, right top, from(#B0DAB9), to(#DAD299));
+  background: linear-gradient(to right, #B0DAB9, #DAD299);
 }
 
-.three>.main,.three>.cut,.three>.shaving {
+.three > .main, .three > .cut, .three > .shaving {
   width: 16px;
-  background: #DAD299; 
-  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: #DAD299;
+  background: -webkit-gradient(linear, left top, right top, from(#B0DAB9), to(#DAD299));
+  background: linear-gradient(to right, #B0DAB9, #DAD299);
 }
 
-.four>.main,.four>.cut,.four>.shaving {
+.four > .main, .four > .cut, .four > .shaving {
   width: 16px;
-  background: #DAD299; 
-  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: #DAD299;
+  background: -webkit-gradient(linear, left top, right top, from(#B0DAB9), to(#DAD299));
+  background: linear-gradient(to right, #B0DAB9, #DAD299);
 }
 
-.six>.main,.six>.cut,.six>.shaving {
+.six > .main, .six > .cut, .six > .shaving {
   width: 16px;
-  background: #DAD299; 
-  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: #DAD299;
+  background: -webkit-gradient(linear, left top, right top, from(#B0DAB9), to(#DAD299));
+  background: linear-gradient(to right, #B0DAB9, #DAD299);
 }
 
-.left>.main,.left>.cut,.left>.shaving {
+.left > .main, .left > .cut, .left > .shaving {
   width: 32px;
   background: #fff;
   font-size: 12px;
@@ -131,7 +145,7 @@ select {
   line-height: 16px;
 }
 
-.right>.main,.right>.cut,.right>.shaving {
+.right > .main, .right > .cut, .right > .shaving {
   width: 32px;
   background: #fff;
   font-size: 12px;
@@ -139,7 +153,7 @@ select {
   line-height: 16px;
 }
 
-.right>.outerCut,.right>.innerCut,.right>.rightShaving {
+.right > .outerCut, .right > .innerCut, .right > .rightShaving {
   width: 32px;
   background: #fff;
   font-size: 12px;
@@ -149,7 +163,7 @@ select {
   margin: 1px;
 }
 
-.right>.rightMain{
+.right > .rightMain {
   width: 32px;
   background: #fff;
   font-size: 12px;
@@ -196,15 +210,13 @@ select {
   line-height: 16px;
 }
 
-.right>.rightMain {
+.right > .rightMain {
   line-height: 128px;
 }
 
 /* 16面レイアウト */
-
-
-
 /* variable */
 .is-hidden {
   display: none;
 }
+/*# sourceMappingURL=about.css.map */
