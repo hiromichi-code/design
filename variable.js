@@ -61,6 +61,13 @@ let innerCut = document.querySelectorAll(".innerCut");
 let shortOut = document.querySelector(".shortOut");
 const gripper = document.querySelector(".shortOutOne");
 const UpDown = document.querySelectorAll(".shortIn");
+const tgtFourDropdownMenu = document.querySelector("#method");
+let outerCutSize = document.querySelectorAll(".l-front>.l-right>.right>.outerCut");
+let innerCutSize = document.querySelectorAll(".l-front>.l-right>.right>.innerCut");
+let shaving = document.querySelectorAll(".rightShaving");
+let main = document.querySelectorAll(".rightMain");
+let out = document.querySelectorAll(".bottomOutValue");
+
 
 let kAllLongA4 = (paperLong['菊全']-(bookWidth['A4']*PANEL_COUNT_width))/CUT_COUNT;
 let kAllShortA4 = (paperShort['菊全']-(bookHeight['A4']*PANEL_COUNT_height))-((Number(gripper.textContent)+Number(UpDown[0].textContent)+Number(UpDown[1].textContent)));
@@ -74,11 +81,11 @@ let fourSixHalfShortB5 = (paperShort['四六半']-(bookHeight['B5']*PANEL_COUNT_
 let bHalfLongB5 = (paperLong['B半']-(bookWidth['B5']*PANEL_COUNT_width))/CUT_COUNT;
 let bHalfShortB5 = (paperShort['B半']-(bookHeight['B5']*PANEL_COUNT_height))-((Number(gripper.textContent)+Number(UpDown[0].textContent)+Number(UpDown[1].textContent)));
 
-let kHalfLongB5 = (paperLong['菊半']-(bookWidth['A5']*PANEL_COUNT_width))/CUT_COUNT;
-let kHalfShortB5 = (paperShort['菊半']-(bookHeight['A5']*PANEL_COUNT_height))-((Number(gripper.textContent)+Number(UpDown[0].textContent)+Number(UpDown[1].textContent)));
+let kHalfLongA5 = (paperLong['菊半']-(bookWidth['A5']*PANEL_COUNT_width))/CUT_COUNT;
+let kHalfShortA5 = (paperShort['菊半']-(bookHeight['A5']*PANEL_COUNT_height))-((Number(gripper.textContent)+Number(UpDown[0].textContent)+Number(UpDown[1].textContent)));
 
-let aHalfLongB5 = (paperLong['A半']-(bookWidth['A5']*PANEL_COUNT_width))/CUT_COUNT;
-let aHalfShortB5 = (paperShort['A半']-(bookHeight['A5']*PANEL_COUNT_height))-((Number(gripper.textContent)+Number(UpDown[0].textContent)+Number(UpDown[1].textContent)));
+let aHalfLongA5 = (paperLong['A半']-(bookWidth['A5']*PANEL_COUNT_width))/CUT_COUNT;
+let aHalfShortA5 = (paperShort['A半']-(bookHeight['A5']*PANEL_COUNT_height))-((Number(gripper.textContent)+Number(UpDown[0].textContent)+Number(UpDown[1].textContent)));
 
 let fourSixHalfHalfLongFourSix = (paperLong['四六四']-(bookWidth['四六判']*PANEL_COUNT_width))/CUT_COUNT;
 let fourSixHalfHalfShortFourSix = (paperShort['四六四']-(bookHeight['四六判']*PANEL_COUNT_height))-((Number(gripper.textContent)+Number(UpDown[0].textContent)+Number(UpDown[1].textContent)));
@@ -92,8 +99,8 @@ let fourSixHalfHalfShortB6 = (paperShort['四六四']-(bookHeight['B6']*PANEL_CO
 let bHalfHalfLongB6 = (paperLong['B四']-(bookWidth['B6']*PANEL_COUNT_width))/CUT_COUNT;
 let bHalfHalfShortB6 = (paperShort['B四']-(bookHeight['B6']*PANEL_COUNT_height))-((Number(gripper.textContent)+Number(UpDown[0].textContent)+Number(UpDown[1].textContent)));
 
-let kHalfHalfLongA6 = (paperLong['菊四']-(bookWidth['A6']*PANEL_COUNT_width))/CUT_COUNT;
-let kHalfHalfShortA6 = (paperShort['菊四']-(bookHeight['A6']*PANEL_COUNT_height))-((Number(gripper.textContent)+Number(UpDown[0].textContent)+Number(UpDown[1].textContent)));
+// let kHalfHalfLongA6 = (paperLong['菊四']-(bookWidth['A6']*PANEL_COUNT_width))/CUT_COUNT;
+// let kHalfHalfShortA6 = (paperShort['菊四']-(bookHeight['A6']*PANEL_COUNT_height))-((Number(gripper.textContent)+Number(UpDown[0].textContent)+Number(UpDown[1].textContent)));
 
-let aHalfHalfLongA6 = (paperLong['A四']-(bookWidth['A6']*PANEL_COUNT_width))/CUT_COUNT;
-let aHalfHalfShortA6 = (paperShort['A四']-(bookHeight['A6']*PANEL_COUNT_height))-((Number(gripper.textContent)+Number(UpDown[0].textContent)+Number(UpDown[1].textContent)));
+// let aHalfHalfLongA6 = (paperLong['A四']-(bookWidth['A6']*PANEL_COUNT_width))/CUT_COUNT;
+// let aHalfHalfShortA6 = (paperShort['A四']-(bookHeight['A6']*PANEL_COUNT_height))-((Number(gripper.textContent)+Number(UpDown[0].textContent)+Number(UpDown[1].textContent)));
