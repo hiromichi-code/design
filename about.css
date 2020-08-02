@@ -5,12 +5,35 @@ body {
   padding: 0px;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1 {
+  margin: 0;
+}
+
 /* module  */
 select {
   margin: 16px auto;
   font-size: medium;
-  width: 24%;
   height: 32px;
+  width: 208px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.re {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 32px auto 32px auto;
 }
 
 /* layout */
@@ -20,6 +43,14 @@ select {
   background: -webkit-gradient(linear, left top, right top, from(#B0DAB9), to(#DAD299));
   background: linear-gradient(to right, #B0DAB9, #DAD299);
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .l-header .l-header-main {
@@ -28,6 +59,9 @@ select {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 4%;
 }
 
@@ -77,7 +111,9 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 64px 0 0 640px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* theme */

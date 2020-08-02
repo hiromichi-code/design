@@ -33,3 +33,4 @@ let value = tgtA4DropdownMenu.value;
     shortOut.textContent = aAllShortA4;
   }
 });
+
