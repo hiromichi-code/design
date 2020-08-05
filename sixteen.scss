@@ -11,15 +11,26 @@
   margin: 1px;
 }
 
-@mixin main-margin($height-margin) {
+@mixin main-cut-margin($height-margin) {
   width: 160px;
   height: $height-margin;
   background-color: lightblue;
   margin: 1px;
 }
 
+@mixin main-margin($height-margin) {
+  width: 160px;
+  height: $height-margin;
+  background-color: #fff;
+  margin: 1px;
+}
+
 .left,.right {
   @include no-margin(16px);
+}
+
+.main-left,.main-right {
+  @include no-margin(80px);
 }
 
 .one,.three,.four,.six,.seven,.nine,.ten,.twelve {
@@ -31,7 +42,7 @@
 }
 
 .two,.five,.eight,.eleven {
-  @include main-margin(16px);
+  @include main-cut-margin(16px);
 }
 
 .main-two,.main-five,.main-eight,.main-eleven {
