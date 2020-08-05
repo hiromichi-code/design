@@ -1,0 +1,44 @@
+@mixin no-margin($height-margin) {
+  width: 16px;
+  height: $height-margin;
+  margin: 1px;
+}
+
+@mixin cut-margin($height-margin) {
+  width: 16px;
+  height: $height-margin;
+  background-color: lightblue;
+  margin: 1px;
+}
+
+@mixin main-margin($height-margin) {
+  width: 160px;
+  height: $height-margin;
+  background-color: lightblue;
+  margin: 1px;
+}
+
+.left,.right {
+  @include no-margin(16px);
+}
+
+.one,.three,.four,.six,.seven,.nine,.ten,.twelve {
+  @include cut-margin(16px);
+}
+
+.main-one,.main-three,.main-four,.main-six,.main-seven,.main-nine,.main-ten,.main-twelve {
+  @include cut-margin(80px);
+}
+
+.two,.five,.eight,.eleven {
+  @include main-margin(16px);
+}
+
+.main-two,.main-five,.main-eight,.main-eleven {
+  @include main-margin(80px);
+}
+
+.l-up,.l-one,.l-two,.l-three,.l-four,.l-five,.l-six,.l-seven,.l-eight,.l-nine,.l-ten,.l-eleven,.l-twelve,.l-under {
+  display: flex;
+  justify-content: center;
+}

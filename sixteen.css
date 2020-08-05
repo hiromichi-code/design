@@ -1,0 +1,43 @@
+.left, .right {
+  width: 16px;
+  height: 16px;
+  margin: 1px;
+}
+
+.one, .three, .four, .six, .seven, .nine, .ten, .twelve {
+  width: 16px;
+  height: 16px;
+  background-color: lightblue;
+  margin: 1px;
+}
+
+.main-one, .main-three, .main-four, .main-six, .main-seven, .main-nine, .main-ten, .main-twelve {
+  width: 16px;
+  height: 80px;
+  background-color: lightblue;
+  margin: 1px;
+}
+
+.two, .five, .eight, .eleven {
+  width: 160px;
+  height: 16px;
+  background-color: lightblue;
+  margin: 1px;
+}
+
+.main-two, .main-five, .main-eight, .main-eleven {
+  width: 160px;
+  height: 80px;
+  background-color: lightblue;
+  margin: 1px;
+}
+
+.l-up, .l-one, .l-two, .l-three, .l-four, .l-five, .l-six, .l-seven, .l-eight, .l-nine, .l-ten, .l-eleven, .l-twelve, .l-under {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=sixteen.css.map */
