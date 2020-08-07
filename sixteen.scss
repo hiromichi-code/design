@@ -1,55 +1,191 @@
-@mixin no-margin($height-margin) {
-  width: 16px;
-  height: $height-margin;
-  margin: 1px;
+$out-margin: 64px;
+$no-width: 16px;
+$main-width: 160px;
+$btm-margin: 112px;
+$main-color: lightblue;
+$no-color: #fff;
+$item-margin: 32px;
+
+@mixin no-all {
+  margin: 0px;
+  padding: 0px;
 }
 
-@mixin cut-margin($height-margin) {
-  width: 16px;
-  height: $height-margin;
-  background-color: lightblue;
-  margin: 1px;
+@mixin flex-main {
+  display: flex;
+  justify-content: center;
 }
 
-@mixin main-cut-margin($height-margin) {
-  width: 160px;
-  height: $height-margin;
-  background-color: lightblue;
-  margin: 1px;
+@mixin flex-align {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-@mixin main-margin($height-margin) {
-  width: 160px;
-  height: $height-margin;
-  background-color: #fff;
-  margin: 1px;
+@mixin short-size {
+  width: $no-width;
+  height: $no-width;
+}
+
+@mixin font-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+.l-front {
+  .l-design {
+    .left {
+      .main {
+        @include font-end;
+      }
+    }
+  }
+}
+
+.l-back {
+  .l-design {
+    .right {
+      .main {
+        @include font-end;
+      }
+    }
+  }
+}
+
+.top-out,.bottom-out {
+  height: $item-margin;
+  @include font-end;
+  justify-content: center;
 }
 
 .left,.right {
-  @include no-margin(16px);
-}
-
-.main-left,.main-right {
-  @include no-margin(80px);
+  .cut,.shaving {
+    @include short-size;
+    background-color: $no-color;
+    margin: 1px;
+  }
+  .main {
+    height: $main-width/2;
+    width: $item-margin;
+    background-color: $no-color;
+    margin: 1px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .one,.three,.four,.six,.seven,.nine,.ten,.twelve {
-  @include cut-margin(16px);
-}
-
-.main-one,.main-three,.main-four,.main-six,.main-seven,.main-nine,.main-ten,.main-twelve {
-  @include cut-margin(80px);
+  .cut,.shaving {
+    @include short-size;
+    background-color: $main-color;
+    margin: 1px;
+  }
+  .main {
+    height: $main-width/2;
+    width: $no-width;
+    background-color: $main-color;
+    margin: 1px;
+  }
 }
 
 .two,.five,.eight,.eleven {
-  @include main-cut-margin(16px);
+  .cut,.shaving {
+    width: $main-width;
+    height: $no-width;
+    background-color: $main-color;
+    margin: 1px;
+  }
+  .main {
+    height: $main-width/2;
+    width: $main-width;
+    background-color: $no-color;
+    margin: 1px;
+  }
 }
 
-.main-two,.main-five,.main-eight,.main-eleven {
-  @include main-margin(80px);
+.l-design {
+  @include flex-main;
+  margin-bottom: $btm-margin;
 }
 
-.l-up,.l-one,.l-two,.l-three,.l-four,.l-five,.l-six,.l-seven,.l-eight,.l-nine,.l-ten,.l-eleven,.l-twelve,.l-under {
+.l-selector {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  select {
+    margin-top: $item-margin;
+    width: $main-width;
+  }
+}
+
+.re {
+  @include flex-main;
+}
+
+.btn {
+  width: $main-width;
+  line-height: 48px;
+  background-color: darken($main-color,30%);
+  text-align: center;
+  border-radius: 8px;
+  color: $no-color;
+  margin: $btm-margin/2 0;
+  font-weight: bolder;
+  box-shadow: 2px 2px 2px 2px lighten($color: black, $amount: 80%);
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    box-shadow: none;
+    position: relative;
+    top: 2px;
+    background-color: darken($main-color,40%);
+  }
+}
+
+body {
+  @include no-all;
+}
+
+a {
+  text-decoration: none;
+  color: $no-color;
+}
+
+.l-header {
+  height: 96px;
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  @include flex-align;
+
+  .l-header-main {
+    @include flex-align;
+    margin: 0 4%;
+
+     span {
+      animation: color-change 5s linear infinite;
+      margin: 20px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    
+    @keyframes color-change {
+      0%,100%{
+        color: red;
+      }
+    
+      25%{
+        color: #fff;
+      }
+      
+      50%{
+        color: purple;
+      }
+      
+      75%{
+        color: #fff;
+      }
+    }
+  }
 }

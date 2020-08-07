@@ -1,49 +1,216 @@
-.left, .right {
+.l-front .l-design .left .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.l-back .l-design .right .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.top-out, .bottom-out {
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.left .cut, .left .shaving, .right .cut, .right .shaving {
   width: 16px;
   height: 16px;
-  margin: 1px;
-}
-
-.main-left, .main-right {
-  width: 16px;
-  height: 80px;
-  margin: 1px;
-}
-
-.one, .three, .four, .six, .seven, .nine, .ten, .twelve {
-  width: 16px;
-  height: 16px;
-  background-color: lightblue;
-  margin: 1px;
-}
-
-.main-one, .main-three, .main-four, .main-six, .main-seven, .main-nine, .main-ten, .main-twelve {
-  width: 16px;
-  height: 80px;
-  background-color: lightblue;
-  margin: 1px;
-}
-
-.two, .five, .eight, .eleven {
-  width: 160px;
-  height: 16px;
-  background-color: lightblue;
-  margin: 1px;
-}
-
-.main-two, .main-five, .main-eight, .main-eleven {
-  width: 160px;
-  height: 80px;
   background-color: #fff;
   margin: 1px;
 }
 
-.l-up, .l-one, .l-two, .l-three, .l-four, .l-five, .l-six, .l-seven, .l-eight, .l-nine, .l-ten, .l-eleven, .l-twelve, .l-under {
+.left .main, .right .main {
+  height: 80px;
+  width: 32px;
+  background-color: #fff;
+  margin: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.one .cut, .one .shaving, .three .cut, .three .shaving, .four .cut, .four .shaving, .six .cut, .six .shaving, .seven .cut, .seven .shaving, .nine .cut, .nine .shaving, .ten .cut, .ten .shaving, .twelve .cut, .twelve .shaving {
+  width: 16px;
+  height: 16px;
+  background-color: lightblue;
+  margin: 1px;
+}
+
+.one .main, .three .main, .four .main, .six .main, .seven .main, .nine .main, .ten .main, .twelve .main {
+  height: 80px;
+  width: 16px;
+  background-color: lightblue;
+  margin: 1px;
+}
+
+.two .cut, .two .shaving, .five .cut, .five .shaving, .eight .cut, .eight .shaving, .eleven .cut, .eleven .shaving {
+  width: 160px;
+  height: 16px;
+  background-color: lightblue;
+  margin: 1px;
+}
+
+.two .main, .five .main, .eight .main, .eleven .main {
+  height: 80px;
+  width: 160px;
+  background-color: #fff;
+  margin: 1px;
+}
+
+.l-design {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 112px;
+}
+
+.l-selector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.l-selector select {
+  margin-top: 32px;
+  width: 160px;
+}
+
+.re {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn {
+  width: 160px;
+  line-height: 48px;
+  background-color: #3a9fc0;
+  text-align: center;
+  border-radius: 8px;
+  color: #fff;
+  margin: 56px 0;
+  font-weight: bolder;
+  -webkit-box-shadow: 2px 2px 2px 2px #cccccc;
+          box-shadow: 2px 2px 2px 2px #cccccc;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  position: relative;
+  top: 2px;
+  background-color: #2e7e99;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.l-header {
+  height: 96px;
+  background: #DAD299;
+  background: -webkit-gradient(linear, left top, right top, from(#B0DAB9), to(#DAD299));
+  background: linear-gradient(to right, #B0DAB9, #DAD299);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.l-header .l-header-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 4%;
+}
+
+.l-header .l-header-main span {
+  -webkit-animation: color-change 5s linear infinite;
+          animation: color-change 5s linear infinite;
+  margin: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+@-webkit-keyframes color-change {
+  0%, 100% {
+    color: red;
+  }
+  25% {
+    color: #fff;
+  }
+  50% {
+    color: purple;
+  }
+  75% {
+    color: #fff;
+  }
+}
+
+@keyframes color-change {
+  0%, 100% {
+    color: red;
+  }
+  25% {
+    color: #fff;
+  }
+  50% {
+    color: purple;
+  }
+  75% {
+    color: #fff;
+  }
 }
 /*# sourceMappingURL=sixteen.css.map */
