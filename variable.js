@@ -56,6 +56,7 @@ const CUT_COUNT = 4;
 const cutNone = 0;
 const shavingApply = 3;
 const outWrap = 5;
+const cutApplyAll = 12;
 let outerCut = document.querySelectorAll(".outerCut");
 let innerCut = document.querySelectorAll(".innerCut");
 let shortOut = document.querySelector(".shortOut");
@@ -104,3 +105,4 @@ let bHalfHalfShortB6 = (paperShort['B四']-(bookHeight['B6']*PANEL_COUNT_height)
 
 // let aHalfHalfLongA6 = (paperLong['A四']-(bookWidth['A6']*PANEL_COUNT_width))/CUT_COUNT;
 // let aHalfHalfShortA6 = (paperShort['A四']-(bookHeight['A6']*PANEL_COUNT_height))-((Number(gripper.textContent)+Number(UpDown[0].textContent)+Number(UpDown[1].textContent)));
+

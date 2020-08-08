@@ -30,8 +30,8 @@
 }
 
 .left .cut, .left .shaving, .right .cut, .right .shaving {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   background-color: #fff;
   margin: 1px;
 }
@@ -50,22 +50,22 @@
 }
 
 .one .cut, .one .shaving, .three .cut, .three .shaving, .four .cut, .four .shaving, .six .cut, .six .shaving, .seven .cut, .seven .shaving, .nine .cut, .nine .shaving, .ten .cut, .ten .shaving, .twelve .cut, .twelve .shaving {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   background-color: lightblue;
   margin: 1px;
 }
 
 .one .main, .three .main, .four .main, .six .main, .seven .main, .nine .main, .ten .main, .twelve .main {
   height: 80px;
-  width: 16px;
+  width: 20px;
   background-color: lightblue;
   margin: 1px;
 }
 
 .two .cut, .two .shaving, .five .cut, .five .shaving, .eight .cut, .eight .shaving, .eleven .cut, .eleven .shaving {
   width: 160px;
-  height: 16px;
+  height: 20px;
   background-color: lightblue;
   margin: 1px;
 }
@@ -212,5 +212,13 @@ a {
   75% {
     color: #fff;
   }
+}
+
+.right > .outerCut, .right > .innerCut, .right > .rightShaving {
+  width: 32px;
+  background: #fff;
+  text-align: left;
+  height: 20px;
+  margin: 1px;
 }
 /*# sourceMappingURL=sixteen.css.map */

@@ -1,5 +1,5 @@
 $out-margin: 64px;
-$no-width: 16px;
+$no-width: 20px;
 $main-width: 160px;
 $btm-margin: 112px;
 $main-color: lightblue;
@@ -188,4 +188,12 @@ a {
       }
     }
   }
+}
+
+.right>.outerCut,.right>.innerCut,.right>.rightShaving {
+  width: $item-margin;
+  background:$no-color;
+  text-align: left;
+  height: $no-width;
+  margin: 1px;
 }
