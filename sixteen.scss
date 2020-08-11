@@ -5,6 +5,14 @@ $btm-margin: 112px;
 $main-color: lightblue;
 $no-color: #fff;
 $item-margin: 32px;
+$en-font: futura;
+$base-width: 1px;
+
+@mixin back-color{
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+}
 
 @mixin no-all {
   margin: 0px;
@@ -62,13 +70,13 @@ $item-margin: 32px;
   .cut,.shaving {
     @include short-size;
     background-color: $no-color;
-    margin: 1px;
+    margin: $base-width;
   }
   .main {
     height: $main-width/2;
     width: $item-margin;
     background-color: $no-color;
-    margin: 1px;
+    margin: $base-width;
     display: flex;
     align-items: center;
   }
@@ -78,13 +86,13 @@ $item-margin: 32px;
   .cut,.shaving {
     @include short-size;
     background-color: $main-color;
-    margin: 1px;
+    margin: $base-width;
   }
   .main {
     height: $main-width/2;
     width: $no-width;
     background-color: $main-color;
-    margin: 1px;
+    margin: $base-width;
   }
 }
 
@@ -93,13 +101,13 @@ $item-margin: 32px;
     width: $main-width;
     height: $no-width;
     background-color: $main-color;
-    margin: 1px;
+    margin: $base-width;
   }
   .main {
     height: $main-width/2;
     width: $main-width;
     background-color: $no-color;
-    margin: 1px;
+    margin: $base-width;
   }
 }
 
@@ -125,21 +133,22 @@ $item-margin: 32px;
 .btn {
   width: $main-width;
   line-height: 48px;
-  background-color: darken($main-color,30%);
+  background-color: $main-color;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 32px;
   color: $no-color;
   margin: $btm-margin/2 0;
-  font-weight: bolder;
-  box-shadow: 2px 2px 2px 2px lighten($color: black, $amount: 80%);
+  font-weight: bold;
+  font-family: $en-font;
+  box-shadow: 0px 3px 3px 0px gray;
   &:hover {
     cursor: pointer;
+    background-color: lighten($main-color, 6%);
   }
   &:active {
     box-shadow: none;
-    position: relative;
-    top: 2px;
-    background-color: darken($main-color,40%);
+    background-color: $main-color;
+    transform: translateY(3px);
   }
 }
 
@@ -152,11 +161,13 @@ a {
   color: $no-color;
 }
 
+h1 {
+  font-family: $en-font;
+}
+
 .l-header {
   height: 96px;
-  background: #DAD299; 
-  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  @include back-color;
   @include flex-align;
 
   .l-header-main {
@@ -195,5 +206,5 @@ a {
   background:$no-color;
   text-align: left;
   height: $no-width;
-  margin: 1px;
+  margin: $base-width;
 }

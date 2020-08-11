@@ -1,3 +1,32 @@
+@mixin back-color{
+  background: #DAD299; 
+  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
+  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+}
+
+$no-color: #fff;
+$base-width: 1px;
+$short: 16px;
+
+@mixin back {
+  width: 16px;
+  @include back-color;
+}
+
+@mixin back-main {
+  width: 32px;
+  background: #fff;
+  font-size: 12px;
+  text-align: right;
+  line-height: 16px;
+}
+
+@mixin out {
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+}
+
 /* base */
 body {
   margin: 0px;
@@ -6,7 +35,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: $no-color;
 }
 
 h1 {
@@ -33,10 +62,8 @@ button:hover {
 /* layout */
 .l-header {
   height: 96px;
-  background: #DAD299; 
-  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-  background: linear-gradient(to right, #B0DAB9, #DAD299); 
-  color: #fff;
+  @include back-color;
+  color: $no-color;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -60,7 +87,7 @@ button:hover {
       }
     
       25%{
-        color: #fff;
+        color: $no-color;
       }
       
       50%{
@@ -68,7 +95,7 @@ button:hover {
       }
       
       75%{
-        color: #fff;
+        color: $no-color;
       }
     }
   }
@@ -87,7 +114,7 @@ button:hover {
 .main {
   height: 128px;
   width: 200px;
-  margin: 1px;
+  margin: $base-width;
   text-align: center;
   line-height: 128px;
   font-size: 48px;
@@ -96,19 +123,15 @@ button:hover {
 .cut {
   height: 16px;
   width: 200px;
-  background: #DAD299; 
-  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-  background: linear-gradient(to right, #B0DAB9, #DAD299); 
-  margin: 1px;
+  @include back-color;
+  margin: $base-width;
 }
 
 .shaving {
   height: 16px;
   width: 200px;
-  background: #DAD299; 
-  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-  background: linear-gradient(to right, #B0DAB9, #DAD299); 
-  margin: 1px;
+  @include back-color;
+  margin: $base-width;
 }
 
 .l-eight {
@@ -135,104 +158,48 @@ button:hover {
 }
 
 .one>.main,.one>.cut,.one>.shaving {
-  width: 16px;
-  background: #DAD299; 
-  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  @include back;
 }
 
 .three>.main,.three>.cut,.three>.shaving {
-  width: 16px;
-  background: #DAD299; 
-  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  @include back;
 }
 
 .four>.main,.four>.cut,.four>.shaving {
-  width: 16px;
-  background: #DAD299; 
-  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  @include back;
 }
 
 .six>.main,.six>.cut,.six>.shaving {
-  width: 16px;
-  background: #DAD299; 
-  background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-  background: linear-gradient(to right, #B0DAB9, #DAD299); 
+  @include back;
 }
 
 .left>.main,.left>.cut,.left>.shaving {
-  width: 32px;
-  background: #fff;
-  font-size: 12px;
-  text-align: right;
-  line-height: 16px;
+  @include back-main;
 }
 
 .right>.main,.right>.cut,.right>.shaving {
-  width: 32px;
-  background: #fff;
-  font-size: 12px;
-  text-align: left;
-  line-height: 16px;
+  @include back-main;
 }
 
 .right>.outerCut,.right>.innerCut,.right>.rightShaving {
-  width: 32px;
-  background: #fff;
-  font-size: 12px;
-  text-align: left;
-  line-height: 16px;
+  @include mack-main;
   height: 16px;
-  margin: 1px;
+  margin: $base-width;
 }
 
 .right>.rightMain{
-  width: 32px;
-  background: #fff;
-  font-size: 12px;
-  text-align: left;
-  line-height: 16px;
+  @include mack-main;
   height: 128px;
-  margin: 1px;
+  margin: $base-width;
 }
 
 .topOut {
-  text-align: center;
-  font-size: 12px;
-  line-height: 16px;
+  @include out;
   height: 16px;
 }
 
-.bottomOut {
-  text-align: center;
-  font-size: 12px;
-  line-height: 16px;
-}
-
-.shortOutOne {
-  text-align: center;
-  font-size: 12px;
-  line-height: 16px;
-}
-
-.shortOut {
-  text-align: center;
-  font-size: 12px;
-  line-height: 16px;
-}
-
-.shortIn {
-  text-align: center;
-  font-size: 12px;
-  line-height: 16px;
-}
-
-.bottomOutValue {
-  text-align: center;
-  font-size: 12px;
-  line-height: 16px;
+.bottomOut,.shortOutOne,.shortOut,.shortIn,.bottomOutValue {
+  @include out;
 }
 
 .right>.rightMain {
@@ -244,6 +211,3 @@ button:hover {
 
 
 /* variable */
-.is-hidden {
-  display: none;
-}
